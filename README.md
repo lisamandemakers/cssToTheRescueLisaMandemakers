@@ -7,3 +7,5 @@ Ik heb gekozen voor opracht 1 > de control panel, omdat deze mij het meest aansp
 
 ### Inspiratie 
 
+
+
