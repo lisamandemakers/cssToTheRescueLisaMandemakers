@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+}
+
+
+
+main {
+    height: 100vh;
+}
+
+
+
+section:nth-of-type(1){
+background-color: aqua;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 70vh;
+width: 100vw;
+
+}
+
+/* 
+//////////////////////////////////////////////////////////
+---------------------🐶🐶🐶HONDJE🐶🐶🐶---------------------
+/////////////////////////////////////////////////////// */
+
+.dog {
+    position: relative;
+    background-color: #c62387;
+}
+
+
+
+
+.head {
+    width: 20vw;
+    aspect-ratio: 1;
+    background-color: rgb(242, 205, 171);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: radial-gradient(ellipse 50% 30% at 50% 70%, rgb(255, 255, 255) 50%, transparent 0),
+                      radial-gradient(circle at 63% 60%, rgb(145, 98, 57) 15%, transparent 0);
+}
+
+.head::before {
+    content: "";
+    width: 10vw;
+   aspect-ratio: 1;
+    background-color: rgb(201, 117, 58);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: absolute;
+    top: -1vw;
+    left: -20px;
+
+}
+
+.head::after {
+    content: "";
+    width: 10vw;
+   aspect-ratio: 1;
+    background-color: rgb(201, 117, 58);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: absolute;
+    top: -1vw;
+    left: 13vw;
+    transform: rotate(90deg); 
+}
+
+.eyes {
+    width: 3vw;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 9vw;
+    right: 1.9vw;
+    box-shadow: 6vw 0 black;
+    background-image: 
+    radial-gradient(at 33% 33%, white 14%, transparent 0), /*eerste oog highlights met gradient */
+    radial-gradient(at 66% 66%, white 12%, black 0);
+    z-index: 2;
+}
+
+
+
+/* tweede oog highlights met ::after en box shadow */
+.eyes::after {
+    content: "";
+    width: 0.8vw;
+    aspect-ratio: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 0.7vw;
+    left: 6.6vw;
+    box-shadow: 1vw 1vw rgb(255, 255, 255);
+}
+
+
+
+
+.nose {
+    width: 4vw;
+    height:2.5vw;
+    background-color: black;
+    border-radius: 20% 20% 50% 50% / 25% 25% 70% 70%;
+    position: absolute;
+    top: 12vw;
+    right: -2vw;
+    z-index: 1;
+}
+
+.nose::before {
+  content:"";
+  width:2.4vw;
+  height: 1vw;
+  background-color: rgba(229, 229, 229, 0.376);
+  border-radius: inherit;
+  position: absolute;
+  top: 0.3vw;
+ left: 0.5vw;
+
+}
+
+
+.mouth   {
+    width: 3vw;
+    height:1.5vw;
+    background-color:transparent;
+    border: .5vw solid #000000;
+    border-top: 0;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    top: 14.4vw;
+    right: -2vw;
+    z-index: 1;
+ 
+}
+
+.mouth::before{
+    content: "";
+    height: 0.5vw;
+    aspect-ratio: 1;
+    border-radius: 50% ;
+    background-color: black;
+    position: inherit;
+    left: -.5vw;
+    top: -0.2vw;
+}
+
+.mouth::after{
+    content: "";
+    height: 0.5vw;
+    aspect-ratio: 1;
+    border-radius: 50% ;
+    background-color: black;
+    position: inherit;
+    right: -.5vw;
+    top: -0.2vw;
+}
+
+
+
+.halsband {
+    width: 16vw;
+    height: 6vw;
+    position: absolute;
+    background-color: #fba8db;
+    top: 16.6vw;
+    /* z-index: -1; */
+    border-radius: 0 0 50% 50%;
+    right: -7.9vw;
+}
+
+/* .halsband::before {
+    content: "";
+    height:10vw;
+    width: 10vw;
+    background-color:aqua;
+    position: absolute;
+
+} */
+
+
+
+section:nth-of-type(2) {
+    background-color: rgb(255, 255, 255);
+    height: 50vh;
+    width: 100vw;
+    border-radius: 50px 50px 0 0 ;
+    border: 1px solid;
+    
+}
