@@ -5,6 +5,8 @@ Hier hou ik mijn proces bij voor dit vak, het is de bedoeling dat ik alleen gebr
 ## Final assessment: Modular control panel
 Ik heb gekozen voor opracht 1 > de control panel, omdat deze mij het meest aanspreekt qua uitdagingen, maar ook op het gebied van vormgeving. 
 
+
+## Week 1
 ### Het idee
 Ik wil een control panel gaan maken voor een hondje, waarin gebruikers interacties kunnen uitvoeren zoals het verzorgen, spelen en trainen van de hond. Het panel bevat sliders om de mood en de omstandigheden van de hond aan te passen.
 
@@ -21,4 +23,19 @@ Hier zijn een paar afbeeldingen van de stijl die ik wil gaan aanhouden.
 ![Afbeelding](readmeimg/inspo4.png)
 ![Afbeelding](readmeimg/inspo5.png)
 
+## Week 2
+In week 2 heb ik de volgende workshops gevolgd: 
+* :Has
+* Vormen in CSS
+  * Gradients
+      * linear-gradient
+      * radial-gradient
+      * conic-gradient
+  * Clip paths
+  * Border-radius
+Ik heb hier veel notities over gemaakt in mijn boekje en toegepast op mijn eigen ontwerp.
 
+ ### Control panel update
+ Deze week ben ik begonnen met het maken van mijn CSS hondje. 
+
+ 
