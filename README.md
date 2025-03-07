@@ -38,7 +38,7 @@ Ik heb hier veel notities over gemaakt in mijn boekje en toegepast op mijn eigen
 
  ### Control panel update
  Deze week ben ik begonnen met het maken van mijn CSS hondje. 
- Eerst zag mijn hondje er zo uit: ![Afbeelding](readmeimg/hondjebegin.png.png) vrij simpel
+ Eerst zag mijn hondje er zo uit: ![Afbeelding](readmeimg/hondjebegin.png) vrij simpel
 
 
 Zo ziet hij er nu uit.![Afbeelding](readmeimg/dogweek2.png) 
