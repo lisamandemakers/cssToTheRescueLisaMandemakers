@@ -56,3 +56,23 @@ Ik ben nu tevreden met hoe de hond eruit ziet en ga me nu focussen op:
 
 
  
+## Container styles workshop
+
+```
+--rood:true 
+--blauw: true
+```
+
+```
+@container style(--rood:true) and style(--blauw) {
+  body {
+    background: purple;
+  }
+
+}
+```
+
+@container (style(--rood:true) and style(--blauw)) or style (--paars:true){
+
+
+}

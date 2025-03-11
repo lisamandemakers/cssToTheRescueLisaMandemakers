@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,92 @@
     <!-- Open Sans font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
+
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
 <body>
     <main>
         <section>
-        <div class="dog">
-            <div class="head"></div>
-            <div class="eyes"></div>
-            <div class="nose"></div>
-            <div class="mouth left"></div>
-            <div class="mouth right"></div>
-            <div class="halsband"></div>
-        </div>
-    </section>
+            <!-- ⬇️ dog container ⬇️  -->
+            <div>
+                <!-- head -->
+                <div></div>
+                <!-- ⬇️ eyes ⬇️ -->
+                <div></div>
+                <!-- ⬇️ nose ⬇️ -->
+                <div></div>
+                <!-- ⬇️ mouth ⬇️ -->
+                <div></div>
+                <!-- ⬇️ halsband ⬇️ -->
+                <div></div>
+            </div>
+            <!-- waterbak -->
+            <div>
+                <div class="wrapper">  <div class="wave"></div> </div>
+                <div></div>
+            </div>
 
-        
+        </section>
 
-    <section>
 
-    </section>
-    </main> 
+        <section>
+            <!-- ⬇️ toggle btn container ⬇️  -->
+            <div>
+
+                <label>😊
+                    <input type="radio" value="happy" name="mood" checked>
+                </label>
+
+
+                <label>😐
+                    <input type="radio" value="neutral" name="mood" >
+                </label>
+
+
+                <label>☹️
+                    <input type="radio" value="sad" name="mood">
+                </label>
+            </div>
+
+
+            <div id="dot-wrapper">
+                <form class="dot-form" action="">
+                    <h1 id="form-title">Waterbak</h1>
+                    <div id="dot-slider">
+                        <input type="radio" name="dot-amount" id="1" value="1" checked>
+                        <label for="1" data-dot-amount="0 ml"></label>
+
+                        <input type="radio" name="dot-amount" id="2" value="2">
+                        <label for="2" data-dot-amount="250 ml"></label>
+
+                        <input type="radio" name="dot-amount" id="3" value="3">
+                        <label for="3" data-dot-amount="500 ml"></label>
+
+                        <input type="radio" name="dot-amount" id="4" value="4">
+                        <label for="4" data-dot-amount="750 ml"></label>
+
+                        <input type="radio" name="dot-amount" id="5" value="5">
+                        <label for="5" data-dot-amount="1 L"></label>
+
+                        <div id="dot-input-label"></div>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
 </body>
+
 </html>
 
 
@@ -46,6 +103,7 @@
 
 
 <body>
-    
+
 </body>
+
 </html>
