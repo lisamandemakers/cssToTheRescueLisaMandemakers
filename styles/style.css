@@ -220,6 +220,7 @@ section:nth-of-type(2) {
     flex-direction: column;
     align-items: center;
     position: relative;
+    top: -10vw;
 
     &::after {
         content: "";
@@ -478,8 +479,9 @@ main > section:first-of-type > div:nth-child(2) {
 /* Waterbak container */
 main > section:first-of-type > div:nth-child(2) > div:first-child {
     background-color: #c62387;
-    height: 18vw;
-    width: 40vw;
+    height: 8vw;
+   aspect-ratio: 20 / 9;
+
     clip-path: polygon(10% 100%, 90% 100%, 100% 20%, 0 20%);
    
 }
@@ -501,17 +503,17 @@ main > section:first-of-type > div:nth-child(2)> div:nth-child(2){
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 5px;
-  background-image: linear-gradient(to top, #90b4dc 0%, white 100%);
+  background-image: linear-gradient(to top, #5c97db 0%, rgb(63, 55, 220) 100%);
   
 }
 
 :root {
-    --waterlevel: -20%;
+    --waterlevel: 50%;
 }
 
 .wave {
-    width: 70vw;
-    height: 70vw;
+    width: 35vw;
+    height: 35vw;
     position: absolute;
     bottom: var(--waterlevel);
     left: -35%;
@@ -543,5 +545,5 @@ body:has([value="4"]:checked)  .wave {
 }  
 
 body:has([value="5"]:checked)  .wave {
-    --waterlevel: 75%;
+    --waterlevel: 80%;
 }  
