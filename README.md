@@ -44,7 +44,7 @@ Ik heb hier veel notities over gemaakt in mijn boekje en toegepast op mijn eigen
 Zo ziet hij er nu uit.![Afbeelding](readmeimg/dogweek2.png) 
 Ik liep tegen een paar dingen aan. Het centreren van de hond. Het postioneren van alle vormen en de lagen met z-index werkende maken. Het maken van de ogen had ik eerst  met `::before` en `::after` elementen gedaan. Maar later kwam ik er achterd dat ik met radial gradients heel makkelijk circulaire vormen kan toevoegen aan het hoofd van de hond. 
 
-## Planning week 3
+## Week 3
 Ik ben nu tevreden met hoe de hond eruit ziet en ga me nu focussen op:
 * De control panel 
 * Zorgen dat ik geen classes meer in mijn doc heb
@@ -56,7 +56,7 @@ Ik ben nu tevreden met hoe de hond eruit ziet en ga me nu focussen op:
 
 
  
-## Container styles workshop
+### Container styles workshop
 
 ```
 --rood:true 
