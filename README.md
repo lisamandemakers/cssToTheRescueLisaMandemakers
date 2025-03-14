@@ -44,7 +44,7 @@ Ik heb hier veel notities over gemaakt in mijn boekje en toegepast op mijn eigen
 Zo ziet hij er nu uit.![Afbeelding](readmeimg/dogweek2.png) 
 Ik liep tegen een paar dingen aan. Het centreren van de hond. Het postioneren van alle vormen en de lagen met z-index werkende maken. Het maken van de ogen had ik eerst  met `::before` en `::after` elementen gedaan. Maar later kwam ik er achterd dat ik met radial gradients heel makkelijk circulaire vormen kan toevoegen aan het hoofd van de hond. 
 
-### Planning week 3
+## Planning week 3
 Ik ben nu tevreden met hoe de hond eruit ziet en ga me nu focussen op:
 * De control panel 
 * Zorgen dat ik geen classes meer in mijn doc heb
@@ -76,3 +76,16 @@ Ik ben nu tevreden met hoe de hond eruit ziet en ga me nu focussen op:
 
 
 }
+
+### code experimenten
+Ik ben deze week begonnen met de daadwerkelijke control panel. Ik begon met deze buttons: ![Afbeelding](readmeimg/emoji-btns.png.png)
+
+Ik vond het niet moeilijk om de buttons te stijlen, maar om ze daadwerklijk het gezicht van het hondje te laten veranderen vond ik moelijker. Ik maakte een fout met de has selector waardoor er telkens niks gebeurde.
+
+![Afbeelding](readmeimg/code-has.png) Na hulp van >> is het me gelukt om de juiste selector te vinden, want ik selecteerde telkens in een bepaalde section, waardoor die niet in de eerste section meer kon kijken. Dus heb ik de `:has` selector op de body gezet waardoor die alles kan zien.
+
+
+Voor de volgende control panel item wilde ik een slider maken, die dan een bakje water vult van de hond. Ik heb aan het begin geëxperimenteerd met hbet gebruiken van een `input=range` maar ik kwam er achter dan je om de waardes te berekenen JavaScript nodig hebt. Dus ging ik opzoek naar een ander alternatief om dit op te lossen. Ik kwam uit bij [deze tutoria](https://www.thenoorhub.in/2022/01/pure-css-range-slider-pure-css-dot.html) Deze tutoral gebruikt radio buttons om de slider te maken: ![Afbeelding](readmeimg/dotslider.png). Ik heb hem op deze manier gestijld en zo ziet hij er nu uit: 
+![Afbeelding](readmeimg/waterslide.png)
+
+
