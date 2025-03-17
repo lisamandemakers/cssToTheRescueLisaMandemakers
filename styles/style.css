@@ -533,28 +533,27 @@ main>section:first-of-type>div:nth-child(2)>div:first-child {
     background-color: #c62387;
     height: 8vw;
     aspect-ratio: 20 / 9;
-    min-height: 70px;
     max-height: 100px;
+    min-height: 80px;
     position: absolute;
-    left: 30vw;
-
+    left: 20vw;
     clip-path: polygon(10% 100%, 90% 100%, 100% 20%, 0 20%);
 
 }
 
 /* Water in de bak (ellips die uitsteekt) */
-main>section:first-of-type>div:nth-child(2)>div:nth-child(2) {
-    content: "";
-    width: 40vw;
+/* main>section:first-of-type>div:nth-child(2)>div:nth-child(2) { */
+    /* content: "";
+    width: vw;
     height: 6vw;
     position: absolute;
-    top: 1vw;
+    top: 1vw; */
     /* Zorgt ervoor dat de ellips BOVEN de bak uitsteekt */
-    left: 0;
+    /* left: 0;
     border-radius: 60% / 80%;
-    z-index: 18;
+    z-index: 18; */
     /* Zorgt ervoor dat het boven de bak blijft */
-}
+/* } */
 
 
 .wrapper {
@@ -572,9 +571,11 @@ main>section:first-of-type>div:nth-child(2)>div:nth-child(2) {
 .wave {
     width: 35vw;
     height: 35vw;
+    min-width: 300px;
+    min-height: 300px;
     position: absolute;
     bottom: var(--waterlevel);
-    left: -35%;
+    left: -27%;
     border-radius: 35%;
     background: rgba(255, 255, 255, 0.75);
     animation: wave 10s infinite linear;
