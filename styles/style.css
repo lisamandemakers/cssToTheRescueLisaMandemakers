@@ -28,7 +28,19 @@ main {
 
 
 
-c
+section:nth-of-type(1) {
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(var(--clr-day-sky) 70%, var(--clr-day-grass) 0);
+    flex-shrink: 0;
+}
+
 /* 
 //////////////////////////////////////////////////////////
 ---------------------🐶🐶🐶HONDJE🐶🐶🐶---------------------
