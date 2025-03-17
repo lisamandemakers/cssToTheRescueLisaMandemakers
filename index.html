@@ -21,7 +21,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-
 <body>
     <main>
         <section>
@@ -37,12 +36,15 @@
                 <div></div>
                 <!-- ⬇️ halsband ⬇️ -->
                 <div></div>
+                <div></div>
             </div>
             <!-- waterbak -->
             <div>
                 <div class="wrapper">  <div class="wave"></div> </div>
-              
             </div>
+
+
+          
 
         </section>
 
@@ -67,29 +69,47 @@
             </div>
 
 
-            <div id="dot-wrapper">
-                <form class="dot-form" action="">
-                    <h1 id="form-title">Waterbak</h1>
-                    <div id="dot-slider">
-                        <input type="radio" name="dot-amount" id="1" value="1" checked>
-                        <label for="1" data-dot-amount="0 ml"></label>
-
-                        <input type="radio" name="dot-amount" id="2" value="2">
-                        <label for="2" data-dot-amount="250 ml"></label>
-
-                        <input type="radio" name="dot-amount" id="3" value="3">
-                        <label for="3" data-dot-amount="500 ml"></label>
-
-                        <input type="radio" name="dot-amount" id="4" value="4">
-                        <label for="4" data-dot-amount="750 ml"></label>
-
-                        <input type="radio" name="dot-amount" id="5" value="5">
-                        <label for="5" data-dot-amount="1 L"></label>
-
-                        <div id="dot-input-label"></div>
+                 <!-- ⬇️ waterbak slider ⬇️  -->
+                 <form action="">
+                    <h1 id="form-title">Vul de waterbak!</h1>
+                    <!-- ⬇️ dot-slider ⬇️  -->
+                    <div>
+                        <label data-dot-amount="0 ml">
+                            <input type="radio" name="dot-amount" value="1" checked>
+                        </label>
+                
+                        <label data-dot-amount="250 ml">
+                            <input type="radio" name="dot-amount" value="2">
+                        </label>
+                
+                        <label data-dot-amount="500 ml">
+                            <input type="radio" name="dot-amount" value="3">
+                        </label>
+                
+                        <label data-dot-amount="750 ml">
+                            <input type="radio" name="dot-amount" value="4">
+                        </label>
+                
+                        <label data-dot-amount="1 L">
+                            <input type="radio" name="dot-amount" value="5">
+                        </label>
+                 <!-- ⬇️ active button ⬇️  -->
+                        <div></div>
                     </div>
                 </form>
-            </div>
+
+
+
+
+                <div class="switch">
+                    <label for="toggle">
+                      <input id="toggle" class="toggle-switch" type="checkbox">
+                      <div class="sun-moon"><div class="dots"></div></div>
+                      <div class="background"><div class="stars1"></div><div class="stars2"></div></div>
+                      <div class="fill"></div>
+                    </label>
+                  </div>
+
 
         </section>
     </main>
