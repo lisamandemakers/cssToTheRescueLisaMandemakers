@@ -12,78 +12,74 @@ html {
 
 main {
     height: 100vh;
-flex-direction: col;
-    display: flex;
     flex-direction: column;
+    display: flex;
+
+   
+   
 
 }
 
 :root {
     --clr-day-grass: #9de8a7;
     --clr-day-sky: rgb(96, 215, 254);
- 
+
 }
 
 
 
-section:nth-of-type(1) {
-    background-color: rgb(17, 17, 17);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background-image: linear-gradient( var(--clr-day-sky) 70% , var(--clr-day-grass) 0);
-flex-shrink: 0;
-}
-
+c
 /* 
 //////////////////////////////////////////////////////////
 ---------------------🐶🐶🐶HONDJE🐶🐶🐶---------------------
 /////////////////////////////////////////////////////// */
 /* dog */
 body>main>section:first-of-type>div:first-child {
-    position: relative;
-    background-color: #c6c023;
-    height: 20%;
+    position: absolute;
+    /* background-color: #c6c023; */
+    height: 50%;
     /* width: 100%; */
+    container-type: inline-size;
+    width: 60vw;
+    max-width: 400px;
+  top: 35%;
+
+
 
 }
 
 /* Head */
 main>section:first-of-type>div:first-of-type div:first-child {
-    width: 20vw;
+    width: 50cqw;
+   
     aspect-ratio: 1;
     background-color: rgb(242, 205, 171);
     border-radius: 50%;
     position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 5;
+    left: 25cqw;
+    top: 1cqw;
+   
     background-image: radial-gradient(ellipse 50% 30% at 50% 70%, rgb(255, 255, 255) 50%, transparent 0),
-    radial-gradient(circle at 31% 44%, rgb(255, 255, 255) 2.6%, transparent 0),
-    radial-gradient(circle at 36% 48%, rgb(255, 255, 255) 2%, transparent 0),
-    radial-gradient(circle at 61% 44%, rgb(255, 255, 255) 2.7%, transparent 0),
-    radial-gradient(circle at 65.5% 48%, rgb(255, 255, 255) 2%, transparent 0),
-    radial-gradient(circle at 33% 46%, rgb(0, 0, 0) 9%, transparent 0),
-    
-    radial-gradient(circle at 63% 46%, rgb(0, 0, 0) 9%, transparent 0),
+        radial-gradient(circle at 31% 44%, rgb(255, 255, 255) 2.6%, transparent 0),
+        radial-gradient(circle at 36% 48%, rgb(255, 255, 255) 2%, transparent 0),
+        radial-gradient(circle at 61% 44%, rgb(255, 255, 255) 2.7%, transparent 0),
+        radial-gradient(circle at 65.5% 48%, rgb(255, 255, 255) 2%, transparent 0),
+        radial-gradient(circle at 33% 46%, rgb(0, 0, 0) 9%, transparent 0),
+        radial-gradient(circle at 63% 46%, rgb(0, 0, 0) 9%, transparent 0),
         radial-gradient(circle at 63% 60%, rgb(145, 98, 57) 15%, transparent 0);
 }
 
 /* Ear Left */
 main>section:first-of-type>div:first-of-type div:first-child::before {
     content: "";
-    width: 10vw;
+    width: 25cqw;
     aspect-ratio: 1;
     background-color: rgb(201, 117, 58);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     position: absolute;
-    top: -1vw;
-    left: -20px;
+    top: -1cqw;
+    left: -7cqw;
 
 }
 
@@ -91,13 +87,13 @@ main>section:first-of-type>div:first-of-type div:first-child::before {
 /* Ear Right */
 main>section:first-of-type>div:first-of-type div:first-child::after {
     content: "";
-    width: 10vw;
+    width: 25cqw;
     aspect-ratio: 1;
     background-color: rgb(201, 117, 58);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     position: absolute;
-    top: -1vw;
-    left: 13vw;
+    top: -1cqw;
+    left: 32cqw;
     transform: rotate(90deg);
 }
 
@@ -114,8 +110,8 @@ main>section:first-of-type>div:first-of-type div:first-child::after {
     box-shadow: 6vw 0 black;
     background-image:
         radial-gradient(at 33% 33%, white 14%, transparent 0), */
-        /*eerste oog highlights met gradient */
-        /* radial-gradient(at 66% 66%, white 12%, black 0);
+/*eerste oog highlights met gradient */
+/* radial-gradient(at 66% 66%, white 12%, black 0);
     z-index: 2;
 } */
 
@@ -138,78 +134,78 @@ main>section:first-of-type>div:first-of-type div:first-child::after {
 
 /* Nose */
 main>section:first-of-type>div:first-of-type div:nth-child(3) {
-    width: 4vw;
-    height: 2.5vw;
+    width: 10cqw;
+    height: 6.25cqw;
     background-color: black;
     border-radius: 20% 20% 50% 50% / 25% 25% 70% 70%;
     position: absolute;
-    top: 12vw;
-    right: -2vw;
-    z-index: 1;
+    top: 30cqw;
+    left: 45cqw;
+    z-index: 6;
 }
 
 main>section:first-of-type>div:first-of-type div:nth-child(3)::before {
     content: "";
-    width: 2.4vw;
-    height: 1vw;
+    width: 6cqw;
+    height: 2.5cqw;
     background-color: rgba(229, 229, 229, 0.376);
     border-radius: inherit;
     position: absolute;
-    top: 0.3vw;
-    left: 0.5vw;
+    top: 0.75cqw;
+    left: 1.25cqw;
 
 }
 
 /* Mouth */
 main>section:first-of-type>div:first-of-type div:nth-child(4) {
-    width: 3vw;
-    height: 1.5vw;
+    width: 7cqw;
+    height: 3.75cqw;
     background-color: transparent;
     border: var(--mouth-border);
     border-top: 0;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     position: absolute;
-    top: 14.4vw;
-    right: -2vw;
-    z-index: 1;
+    top: 37cqw;
+    left: 45.7cqw;
+    z-index: 8;
     transition: rotate 0.3s ease-in;
     rotate: var(--mouth-rotation);
 }
 
 main>section:first-of-type>div:first-of-type div:nth-child(4)::before {
     content: "";
-    height: 0.5vw;
+    height: 1.25cqw;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: black;
     position: inherit;
-    left: -.5vw;
-    top: -0.2vw;
+    left: -1.2cqw;
+    top: -0.4cqw;
 }
 
 main>section:first-of-type>div:first-of-type div:nth-child(4)::after {
     content: "";
-    height: 0.5vw;
+    height: 1.25cqw;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: black;
     position: inherit;
-    right: -.5vw;
-    top: -0.2vw;
+    right: -1.3cqw;
+    top: -0.4cqw;
 }
 
 
 /* Halsband */
 main>section:first-of-type>div:first-of-type div:nth-child(5) {
-    width: 16vw;
-    height: 6vw;
+    width: 40cqw;
+    height: 15cqw;
     position: absolute;
     background-color: var(--halsband);
-    top: 16.6vw;
-    /* z-index: -1; */
+    z-index: 3;
     border-radius: 0 0 50% 50%;
-    right: -7.9vw;
+    top: 40.6cqw;
+    left: 30cqw;
 }
 
 /* .halsband::before {
@@ -223,22 +219,99 @@ main>section:first-of-type>div:first-of-type div:nth-child(5) {
 
 
 /* lijf */
-/* main>section:first-of-type>div:first-of-type div:nth-child(6){
-height: 25vw;
-aspect-ratio: 1 / 1;
-background-color: rgb(254, 96, 96);
-z-index: 99;
-position: absolute;
-border-radius: 43% 36% 35% 37% / 46% 46% 22% 23% ;
-top: 10vw;
-right: -13vw;
-z-index: 4;
+main>section:first-of-type>div:first-of-type div:nth-child(6) {
+    height: 57.5cqw;
+    aspect-ratio: 1 / 1.1;
+    z-index: 99;
+    position: absolute;
+    border-radius: 43% 36% 35% 37% / 46% 46% 22% 23%;
+    top: 45cqw;
+    left: 24cqw;
+    z-index: 1;
+    background-image:
+    radial-gradient(ellipse 1% 5% at 30% 56%, rgb(38, 18, 3)50%, transparent 0%),
+    radial-gradient(ellipse 1% 5% at 33% 55%, rgb(38, 18, 3)50%, transparent 0%),
+    radial-gradient(ellipse 1% 5% at 27% 55%, rgb(38, 18, 3)50%, transparent 0%),
+    radial-gradient(ellipse 1% 5% at 67% 55%, rgb(38, 18, 3)50%, transparent 0%),
+    radial-gradient(ellipse 1% 5% at 70% 56%, rgb(38, 18, 3)50%, transparent 0%),
+    radial-gradient(ellipse 1% 5% at 73% 55%, rgb(38, 18, 3)50%, transparent 0%),
+    radial-gradient(ellipse 20% 30% at 70% 44%, rgb(201, 117, 58)50%, transparent 0%),
+    radial-gradient(ellipse 20% 30% at 30% 44%, rgb(201, 117, 58)50%, transparent 0%),
+    
+    
+        
+    
+    radial-gradient(ellipse 100% 100% at 70% 70%, rgb(242, 205, 171) 100%, transparent 0)
+}
+
+
+/* flowers */
+main>section:first-of-type>div:nth-of-type(3), 
+main>section:first-of-type>div:nth-of-type(4),
+main>section:first-of-type>div:nth-of-type(5),
+main>section:first-of-type>div:nth-of-type(6),
+main>section:first-of-type>div:nth-of-type(7)  {
+    position: absolute;
+    z-index: 88;
+    right: 65%;
+    top: 80%;
+    width: 5vw;
+   aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 
+      -2vw -3vw 0 0 #ffffff,
+      2vw -3vw 0 0 #ffffff,
+      2vw 3vw 0 0 #ffffff,
+      -2vw 3vw 0 0 #ffffff,
+      3.4vw 0px 0 0 #ffffff,
+      -3.5vw 0px 0 0 #ffffff;
+    background: var(--halsband);
+    animation: rotate 15s linear infinite;
+    scale: 0.5;
+
+
+    &:nth-of-type(4) {
+        left: 60%;
+        background-color: #b8c623;
+    }
+
+    &:nth-of-type(5) {
+        left: 70%;
+        top: 85%;
+        scale: 0.3;
+        background-color: #6553b6;
+    }
+
+    &:nth-of-type(6) {
+        left: 90%;
+        top: 70%;
+        scale: 0.3;
+        background-color: #23c651;
+    }
+
+    &:nth-of-type(7) {
+        left:10%;
+        top: 80%;
+        background-color: #c62387;
+        scale: 0.8;
+
+       
+    }
 
 
 
-} */
+  }
 
 
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  main>section:first-of-type>div:nth-of-type(4) {
+    left: 50%;
+}
 /* 
 //////////////////////////////////////////////////////////
 ----------------✨✨✨ CONTROL PANEL ✨✨✨-----------------
@@ -256,7 +329,7 @@ section:nth-of-type(2) {
     align-items: center;
     position: relative;
     top: -4em;
-  
+
 
     &::after {
         content: "";
@@ -324,17 +397,18 @@ section:nth-of-type(2)>div:first-of-type label:has(input[type="radio"]:checked) 
 
 :root {
     --mouth-rotation: 0deg;
-    --mouth-border: .5vw solid #000000;
+    --mouth-border: 1.25cqw solid #000000;
 
 }
 
 body:has([value="neutral"]:checked) section:first-of-type>div:first-of-type div:nth-child(4) {
 
-    --mouth-border: .5vw solid #000000;
+    --mouth-border: 1.25cqw solid #000000;
     border-radius: 2%;
     border-left: none;
     border-right: none;
-    left: -1.3vw;
+    left: 47cqw;
+    transition: 0.1s ease-in-out;
 
 
     &::after {
@@ -534,25 +608,26 @@ main>section:first-of-type>div:nth-child(2)>div:first-child {
     height: 8vw;
     aspect-ratio: 20 / 9;
     max-height: 100px;
-    min-height: 80px;
+    
     position: absolute;
-    left: 20vw;
+    top: 120px;
+    left: 30vw;
     clip-path: polygon(10% 100%, 90% 100%, 100% 20%, 0 20%);
 
 }
 
 /* Water in de bak (ellips die uitsteekt) */
 /* main>section:first-of-type>div:nth-child(2)>div:nth-child(2) { */
-    /* content: "";
+/* content: "";
     width: vw;
     height: 6vw;
     position: absolute;
     top: 1vw; */
-    /* Zorgt ervoor dat de ellips BOVEN de bak uitsteekt */
-    /* left: 0;
+/* Zorgt ervoor dat de ellips BOVEN de bak uitsteekt */
+/* left: 0;
     border-radius: 60% / 80%;
     z-index: 18; */
-    /* Zorgt ervoor dat het boven de bak blijft */
+/* Zorgt ervoor dat het boven de bak blijft */
 /* } */
 
 
@@ -575,11 +650,12 @@ main>section:first-of-type>div:nth-child(2)>div:first-child {
     min-height: 300px;
     position: absolute;
     bottom: var(--waterlevel);
-    left: -27%;
+    left: -40%;
     border-radius: 35%;
     background: rgba(255, 255, 255, 0.75);
     animation: wave 10s infinite linear;
     rotate: 7deg;
+    overflow: hidden;
 }
 
 @keyframes wave {
@@ -640,9 +716,7 @@ main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::aft
     transform: translate(-50%, -50%) scale(1.2);
     border-radius: 114px;
     background: radial-gradient(circle, var(--halsband) 25%, transparent 0),
-    linear-gradient(145deg, #d5d5d5, #fefefe);
+        linear-gradient(145deg, #d5d5d5, #fefefe);
     box-shadow: 3px 3px 5px #c9c9c9, -3px -3px 5px #ffffff;
 
 }
-
-
