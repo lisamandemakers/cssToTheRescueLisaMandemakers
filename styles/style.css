@@ -11,7 +11,7 @@ html {
 
 
 main {
-    height: 100vh;
+    /* height: 100vh; */
     flex-direction: column;
     display: flex;
 
@@ -23,9 +23,8 @@ main {
 :root {
     --clr-day-grass: #9de8a7;
     --clr-day-sky: rgb(96, 215, 254);
-
+    --heightbackground: 100vh;
 }
-
 
 
 section:nth-of-type(1) {
@@ -34,11 +33,14 @@ section:nth-of-type(1) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    height: var(--heightbackground);
     width: 100%;
     position: relative;
     background-image: linear-gradient(var(--clr-day-sky) 70%, var(--clr-day-grass) 0);
     flex-shrink: 0;
+    container-type: inline-size;
+    transition: 1s ease-in-out;
+    z-index: -1;
 }
 
 /* 
@@ -52,9 +54,11 @@ body>main>section:first-of-type>div:first-child {
     height: 50%;
     /* width: 100%; */
     container-type: inline-size;
-    width: 60vw;
+    width: 60cqw;
     max-width: 400px;
-  top: 35%;
+  top: cqw;
+  scale: 0.7;
+  
 
 
 
@@ -107,6 +111,7 @@ main>section:first-of-type>div:first-of-type div:first-child::after {
     top: -1cqw;
     left: 32cqw;
     transform: rotate(90deg);
+
 }
 
 
@@ -332,7 +337,7 @@ main>section:first-of-type>div:nth-of-type(7)  {
 
 section:nth-of-type(2) {
     background: #ededed;
-    height: 500px;
+    height:1000px;
     width: 100%;
     border-radius: 50px 50px 0 0;
     /* border: 1px solid; */
@@ -343,17 +348,12 @@ section:nth-of-type(2) {
     top: -4em;
 
 
-    &::after {
-        content: "";
-        width: 4em;
-        border: 1px solid;
-        position: absolute;
-        top: 1vw;
-        opacity: 0.3;
-    }
-
-
 }
+
+
+/* pull button */
+
+
 
 
 /* 
@@ -364,7 +364,7 @@ section:nth-of-type(2) {
 
 /* toggle container */
 section:nth-of-type(2)>div:first-of-type {
-    margin: 2vw;
+    margin: 3vw;
     display: flex;
     gap: 10px;
     /* background-color: #c62387; */
@@ -622,7 +622,7 @@ main>section:first-of-type>div:nth-child(2)>div:first-child {
     max-height: 100px;
     
     position: absolute;
-    top: 120px;
+    top: 1vh;
     left: 30vw;
     clip-path: polygon(10% 100%, 90% 100%, 100% 20%, 0 20%);
 
@@ -731,4 +731,36 @@ main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::aft
         linear-gradient(145deg, #d5d5d5, #fefefe);
     box-shadow: 3px 3px 5px #c9c9c9, -3px -3px 5px #ffffff;
 
+}
+
+
+
+
+.sleep {
+    /* background-color: #c62387; */
+    position: absolute;
+    top: -45px;
+    
+}
+
+
+.sleep label {
+    /* background-color: #2361c6; */
+    appearance: none;
+    padding: 40px;
+    border-bottom: 4px solid #9e9e9e;
+    cursor: pointer;
+    height: var(--heightbackground);
+    /* background-color: #5c97db; */
+   
+   
+}
+
+
+.sleep input[type="checkbox"] {
+    display: none;
+    
+}
+ body:has(input[type="checkbox"]:checked) {
+    --heightbackground: 60vh;
 }
