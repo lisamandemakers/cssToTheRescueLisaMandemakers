@@ -3,6 +3,12 @@ html {
 
 }
 
+@property --eye-size {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 9%;
+}
+
 
 * {
     margin: 0;
@@ -15,15 +21,16 @@ main {
     flex-direction: column;
     display: flex;
 
-   
-   
+
+
 
 }
 
 :root {
-    --clr-day-grass: #9de8a7;
-    --clr-day-sky: rgb(96, 215, 254);
+    --clr-grass: #9de8a7;
+    --clr-sky: rgb(96, 215, 254);
     --heightbackground: 100vh;
+    --clr-leaves: #fff1f6;
 }
 
 
@@ -36,7 +43,7 @@ section:nth-of-type(1) {
     height: var(--heightbackground);
     width: 100%;
     position: relative;
-    background-image: linear-gradient(var(--clr-day-sky) 70%, var(--clr-day-grass) 0);
+    background-image: linear-gradient(var(--clr-sky) 70%, var(--clr-grass) 0);
     flex-shrink: 0;
     container-type: inline-size;
     transition: 1s ease-in-out;
@@ -56,19 +63,49 @@ body>main>section:first-of-type>div:first-child {
     container-type: inline-size;
     width: 60cqw;
     max-width: 400px;
-  top: cqw;
-  scale: 0.7;
-  top: 40%;
-  
+    top: cqw;
+    scale: 0.7;
+    top: 40%;
+
 
 
 
 }
 
+
+
+@keyframes oogBeweging {
+    0% {
+        background-position:
+            70% 60%, 30% 60%, 50% 70%,
+            31% 44%, 36% 48%, 61% 44%, 65.5% 48%,
+            33% 46%, 63% 46%, 63% 60%;
+    }
+
+    50% {
+        background-position:
+            72% 62%, 28% 62%, 50% 70%,
+            /* Ogen bewegen */
+            30% 45%, 37% 47%, 60% 45%, 66% 47%,
+            /* Witte highlights */
+            35% 48%, 65% 48%, 63% 62%;
+        /* Pupillen */
+    }
+
+    100% {
+        background-position:
+            70% 60%, 30% 60%, 50% 70%,
+            31% 44%, 36% 48%, 61% 44%, 65.5% 48%,
+            33% 46%, 63% 46%, 63% 60%;
+    }
+}
+
+
 /* Head */
 main>section:first-of-type>div:first-of-type div:first-child {
     width: 50cqw;
-   
+
+
     aspect-ratio: 1;
     background-color: rgb(242, 205, 171);
     border-radius: 50%;
@@ -76,16 +113,28 @@ main>section:first-of-type>div:first-of-type div:first-child {
     z-index: 5;
     left: 25cqw;
     top: 1cqw;
-   
-    background-image: radial-gradient(ellipse 50% 30% at 50% 70%, rgb(255, 255, 255) 50%, transparent 0),
+
+    background-image:
+        radial-gradient(ellipse 50% 30% at 70% 60%, rgb(238, 180, 213) 15%, transparent 0),
+        radial-gradient(ellipse 50% 30% at 30% 60%, rgb(238, 180, 213) 15%, transparent 0),
+        radial-gradient(ellipse 50% 30% at 50% 70%, rgb(255, 255, 255) 50%, transparent 0),
         radial-gradient(circle at 31% 44%, rgb(255, 255, 255) 2.6%, transparent 0),
         radial-gradient(circle at 36% 48%, rgb(255, 255, 255) 2%, transparent 0),
         radial-gradient(circle at 61% 44%, rgb(255, 255, 255) 2.7%, transparent 0),
         radial-gradient(circle at 65.5% 48%, rgb(255, 255, 255) 2%, transparent 0),
-        radial-gradient(circle at 33% 46%, rgb(0, 0, 0) 9%, transparent 0),
-        radial-gradient(circle at 63% 46%, rgb(0, 0, 0) 9%, transparent 0),
+        radial-gradient(circle at 33% 46%, rgb(0, 0, 0) var(--eye-size), transparent 0),
+        radial-gradient(circle at 63% 46%, rgb(0, 0, 0) var(--eye-size), transparent 0),
         radial-gradient(circle at 63% 60%, rgb(145, 98, 57) 15%, transparent 0);
+    animation: eyes 3s ease-in infinite;
 }
+
+@keyframes eyes {
+    from { --eye-size: 9%; }
+    to { --eye-size: 12%; }
+}
+
+
+
 
 /* Ear Left */
 main>section:first-of-type>div:first-of-type div:first-child::before {
@@ -247,42 +296,42 @@ main>section:first-of-type>div:first-of-type div:nth-child(6) {
     left: 24cqw;
     z-index: 1;
     background-image:
-    radial-gradient(ellipse 1% 5% at 30% 56%, rgb(38, 18, 3)50%, transparent 0%),
-    radial-gradient(ellipse 1% 5% at 33% 55%, rgb(38, 18, 3)50%, transparent 0%),
-    radial-gradient(ellipse 1% 5% at 27% 55%, rgb(38, 18, 3)50%, transparent 0%),
-    radial-gradient(ellipse 1% 5% at 67% 55%, rgb(38, 18, 3)50%, transparent 0%),
-    radial-gradient(ellipse 1% 5% at 70% 56%, rgb(38, 18, 3)50%, transparent 0%),
-    radial-gradient(ellipse 1% 5% at 73% 55%, rgb(38, 18, 3)50%, transparent 0%),
-    radial-gradient(ellipse 20% 30% at 70% 44%, rgb(201, 117, 58)50%, transparent 0%),
-    radial-gradient(ellipse 20% 30% at 30% 44%, rgb(201, 117, 58)50%, transparent 0%),
-    
-    
-        
-    
-    radial-gradient(ellipse 100% 100% at 70% 70%, rgb(242, 205, 171) 100%, transparent 0)
+        radial-gradient(ellipse 1% 5% at 30% 56%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 33% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 27% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 67% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 70% 56%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 73% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 20% 30% at 70% 44%, rgb(201, 117, 58)50%, transparent 0%),
+        radial-gradient(ellipse 20% 30% at 30% 44%, rgb(201, 117, 58)50%, transparent 0%),
+
+
+
+
+        radial-gradient(ellipse 100% 100% at 70% 70%, rgb(242, 205, 171) 100%, transparent 0)
 }
 
 
 /* flowers */
-main>section:first-of-type>div:nth-of-type(3), 
+main>section:first-of-type>div:nth-of-type(3),
 main>section:first-of-type>div:nth-of-type(4),
 main>section:first-of-type>div:nth-of-type(5),
 main>section:first-of-type>div:nth-of-type(6),
-main>section:first-of-type>div:nth-of-type(7)  {
+main>section:first-of-type>div:nth-of-type(7) {
     position: absolute;
     z-index: 88;
     right: 65%;
     top: 80%;
     width: 5vw;
-   aspect-ratio: 1;
+    aspect-ratio: 1;
     border-radius: 50%;
-    box-shadow: 
-      -2vw -3vw 0 0 #ffffff,
-      2vw -3vw 0 0 #ffffff,
-      2vw 3vw 0 0 #ffffff,
-      -2vw 3vw 0 0 #ffffff,
-      3.4vw 0px 0 0 #ffffff,
-      -3.5vw 0px 0 0 #ffffff;
+    box-shadow:
+        -2vw -3vw 0 0 var(--clr-leaves),
+        2vw -3vw 0 0 var(--clr-leaves),
+        2vw 3vw 0 0 var(--clr-leaves),
+        -2vw 3vw 0 0  var(--clr-leaves),
+        3.4vw 0px 0 0 var(--clr-leaves),
+        -3.5vw 0px 0 0 var(--clr-leaves);
     background: var(--halsband);
     animation: rotate 15s linear infinite;
     scale: 0.5;
@@ -308,28 +357,29 @@ main>section:first-of-type>div:nth-of-type(7)  {
     }
 
     &:nth-of-type(7) {
-        left:10%;
+        left: 10%;
         top: 80%;
         background-color: #c62387;
         scale: 0.8;
 
-       
+
     }
 
 
 
-  }
+}
 
 
-  @keyframes rotate {
+@keyframes rotate {
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
-  main>section:first-of-type>div:nth-of-type(4) {
+main>section:first-of-type>div:nth-of-type(4) {
     left: 50%;
 }
+
 /* 
 //////////////////////////////////////////////////////////
 ----------------✨✨✨ CONTROL PANEL ✨✨✨-----------------
@@ -338,7 +388,7 @@ main>section:first-of-type>div:nth-of-type(7)  {
 
 section:nth-of-type(2) {
     background: #ededed;
-    height:1000px;
+    height: 1000px;
     width: 100%;
     border-radius: 50px 50px 0 0;
     /* border: 1px solid; */
@@ -621,7 +671,7 @@ main>section:first-of-type>div:nth-child(2)>div:first-child {
     height: 8vw;
     aspect-ratio: 20 / 9;
     max-height: 100px;
-    
+
     position: absolute;
     top: 1vh;
     left: 30vw;
@@ -741,7 +791,7 @@ main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::aft
     /* background-color: #c62387; */
     position: absolute;
     top: -45px;
-    
+
 }
 
 
@@ -753,15 +803,206 @@ main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::aft
     cursor: pointer;
     height: var(--heightbackground);
     /* background-color: #5c97db; */
-   
-   
+
+
 }
 
 
 .sleep input[type="checkbox"] {
     display: none;
-    
+
 }
- body:has(input[type="checkbox"]:checked) {
+
+body:has(input[value="hoi"]:checked) {
     --heightbackground: 60vh;
 }
+
+
+/* DAY NIGHT SWITCH */
+
+html:has([value="day"]:checked) {
+	--day:true;
+}
+
+html:has([value="night"]:checked) {
+	--night:true;
+}
+
+
+main section:nth-of-type(2) div:nth-child(4) {
+    background-color: #c62387;
+    margin: 60px;
+}
+
+
+
+
+
+@container style(--day:true) {
+    main>section:first-of-type>div:nth-of-type(8)  {
+        height: 6em;
+        width: 6em;
+        border-radius: 50%;
+    
+        background-color: #f1f5b8;
+        position: absolute;
+        top: 0;
+        margin-top: 2em;
+        right: 4vw;
+        border: 5px solid #f5eb71;
+        transition: 0.1s ease-in-out;
+    
+    
+    }
+	
+	
+}
+
+
+@container style(--night:true) {
+	body {
+        --clr-sky: #2843c0;
+        --clr-grass: #013c23;
+	}
+
+    main>section:first-of-type>div:nth-of-type(8)  {
+        height: 6em;
+        width: 6em;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        margin-top: 2em;
+        right: 4vw;
+        border: 5px solid #e4e4e4;
+        transition: 0.1s ease-in-out;
+    
+    
+        &::before {
+            content: "";
+            height: 1em;
+            aspect-ratio: 1;
+            position: absolute;
+            background-color: #e4e4e4;
+            border-radius: 50%;
+            left: 25px;
+            top: 10px;
+        
+        }
+            &::after {
+                content: "";
+                height: 0.5em;
+                aspect-ratio: 1;
+                position: absolute;
+                background-color: #e4e4e4;
+                border-radius: 50%;
+                left: 15px;
+                top: 30px;
+        }}
+
+
+            /* STARS */
+     main>section:first-of-type>div:nth-of-type(9) {
+        height: 0.3em;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: rgb(63, 16, 16);
+        position: absolute;
+        top: 0;
+        margin-top: 2em;
+        transition: 0.1s ease-in-out;
+        box-shadow:
+   -8vw 9vh 0 0 #ffffff,
+    32vw 22vh 0 0 #ffffff,
+    -18vw 34vh 0 0 #ffffff,
+    23vw 28vh 0 0 #ffffff,
+    -47vw 7vh 0 0 #ffffff,
+    12vw 6vh 0 0 #ffffff,
+    -28vw 33vh 0 0 #ffffff,
+    52vw 29vh 0 0 #ffffff,
+    -42vw 24vh 0 0 #ffffff,
+    33vw 12vh 0 0 #ffffff,
+    -31vw 36vh 0 0 #ffffff,
+    54vw 31vh 0 0 #ffffff,
+    -16vw 21vh 0 0 #ffffff,
+    62vw 6vh 0 0 #ffffff,
+    -39vw 31vh 0 0 #ffffff,
+    28vw 27vh 0 0 #ffffff,
+    -26vw 31vh 0 0 #ffffff,
+    11vw 11vh 0 0 #ffffff,
+    -17vw 19vh 0 0 #ffffff,
+    51vw 12vh 0 0 #ffffff,
+    -59vw 32vh 0 0 #ffffff,
+    7vw 19vh 0 0 #ffffff,
+    -29vw 26vh 0 0 #ffffff,
+    47vw 35vh 0 0 #ffffff,
+    -19vw 32vh 0 0 #ffffff,
+    52vw 34vh 0 0 #ffffff,
+    -38vw 16vh 0 0 #ffffff,
+    32vw 6vh 0 0 #ffffff;
+
+        &::before {
+            content: "";
+            height: 0.2em;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            margin-top: 2em;
+            box-shadow:
+            -43vw 12vh 0 0 #ffffff,
+            27vw 28vh 0 0 #ffffff,
+            -55vw 25vh 0 0 #ffffff,
+            19vw 30vh 0 0 #ffffff,
+            -50vw 7vh 0 0 #ffffff,
+            9vw 22vh 0 0 #ffffff,
+            -32vw 28vh 0 0 #ffffff,
+            45vw 13vh 0 0 #ffffff,
+            -24vw 19vh 0 0 #ffffff,
+            11vw 9vh 0 0 #ffffff,
+            -18vw 31vh 0 0 #ffffff,
+            51vw 21vh 0 0 #ffffff,
+            -12vw 16vh 0 0 #ffffff,
+            58vw 33vh 0 0 #ffffff,
+            -38vw 23vh 0 0 #ffffff,
+            17vw 18vh 0 0 #ffffff,
+            -60vw 30vh 0 0 #ffffff,
+            25vw 27vh 0 0 #ffffff,
+            -44vw 5vh 0 0 #ffffff,
+            39vw 11vh 0 0 #ffffff,
+            -29vw 30vh 0 0 #ffffff,
+            50vw 16vh 0 0 #ffffff,
+            -47vw 19vh 0 0 #ffffff,
+            33vw 28vh 0 0 #ffffff,
+            -40vw 12vh 0 0 #ffffff,
+            53vw 26vh 0 0 #ffffff,
+            -15vw 18vh 0 0 #ffffff,
+            60vw 5vh 0 0 #ffffff;
+    
+        }
+}
+main>section:first-of-type>div:nth-of-type(3),
+main>section:first-of-type>div:nth-of-type(4),
+main>section:first-of-type>div:nth-of-type(5),
+main>section:first-of-type>div:nth-of-type(6),
+main>section:first-of-type>div:nth-of-type(7) {
+
+    --clr-leaves: #17023a;
+}
+
+
+    }
+
+
+
+
+
+/* @keyframes scaleStars {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+} */

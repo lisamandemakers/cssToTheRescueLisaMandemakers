@@ -21,6 +21,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
 <body>
     <main>
         <section>
@@ -39,21 +40,30 @@
                 <!-- ⬇️ body ⬇️ -->
                 <div></div>
             </div>
-            <!-- waterbak -->
+            <!-- ⬇️ waterbak ⬇️ -->
             <div>
-                <div class="wrapper">  <div class="wave"></div> </div>
+                <div class="wrapper">
+                    <div class="wave"></div>
+                </div>
             </div>
+            <!-- ⬇️ Flowers ⬇️ -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
 
-            <div class="flower"></div>
+         <!-- ⬇️ moon & sun ⬇️ -->
+            <div></div>
 
-            <div class="flower"></div>
-            <div class="flower"></div>
-           
-            <div class="flower"></div>
-            <div class="flower"></div>
+             <!-- ⬇️ star ⬇️ -->
+             <div></div>
+            
 
 
-          
+
+
+
 
         </section>
 
@@ -69,7 +79,7 @@
 
 
                 <label>😐
-                    <input type="radio" value="neutral" name="mood" >
+                    <input type="radio" value="neutral" name="mood">
                 </label>
 
 
@@ -79,46 +89,50 @@
             </div>
 
 
-                 <!-- ⬇️ waterbak slider ⬇️  -->
-                 <form action="">
-                    <h1 id="form-title">Vul de waterbak!</h1>
-                    <!-- ⬇️ dot-slider ⬇️  -->
-                    <div>
-                        <label data-dot-amount="0 ml">
-                            <input type="radio" name="dot-amount" value="1" checked>
-                        </label>
-                
-                        <label data-dot-amount="250 ml">
-                            <input type="radio" name="dot-amount" value="2">
-                        </label>
-                
-                        <label data-dot-amount="500 ml">
-                            <input type="radio" name="dot-amount" value="3">
-                        </label>
-                
-                        <label data-dot-amount="750 ml">
-                            <input type="radio" name="dot-amount" value="4">
-                        </label>
-                
-                        <label data-dot-amount="1 L">
-                            <input type="radio" name="dot-amount" value="5">
-                        </label>
-                 <!-- ⬇️ active button ⬇️  -->
-                        <div></div>
-                    </div>
-                </form>
+            <!-- ⬇️ waterbak slider ⬇️  -->
+            <form action="">
+                <h1 id="form-title">Vul de waterbak!</h1>
+                <!-- ⬇️ dot-slider ⬇️  -->
+                <div>
+                    <label data-dot-amount="0 ml">
+                        <input type="radio" name="dot-amount" value="1" checked>
+                    </label>
 
-<div class="sleep">
-    <label>
-        <input type="checkbox" value="hoi" name="mood" >
-    </label>
+                    <label data-dot-amount="250 ml">
+                        <input type="radio" name="dot-amount" value="2">
+                    </label>
 
+                    <label data-dot-amount="500 ml">
+                        <input type="radio" name="dot-amount" value="3">
+                    </label>
 
-</div>
+                    <label data-dot-amount="750 ml">
+                        <input type="radio" name="dot-amount" value="4">
+                    </label>
 
+                    <label data-dot-amount="1 L">
+                        <input type="radio" name="dot-amount" value="5">
+                    </label>
+                    <!-- ⬇️ active button ⬇️  -->
+                    <div></div>
+                </div>
+            </form>
 
-                
+            <div class="sleep">
+                <label>
+                    <input type="checkbox" value="hoi">
+                </label>
+            </div>
 
+            <div>
+                <label><input type="radio" value="day" name="switch" checked> day</label>
+                <label><input type="radio" value="night" name="switch"> night</label>
+
+            </div>
+
+            <div class="switch__1">
+                <input id="switch-1" type="checkbox">
+                <label for="switch-1"></label>
 
         </section>
     </main>
