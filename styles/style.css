@@ -829,10 +829,7 @@ html:has([value="night"]:checked) {
 }
 
 
-main section:nth-of-type(2) div:nth-child(4) {
-    background-color: #c62387;
-    margin: 60px;
-}
+
 
 
 
@@ -992,17 +989,62 @@ main>section:first-of-type>div:nth-of-type(7) {
 }
 
 
+.circle{
+    transform: translateX(30px);
+}
+
     }
 
+  
+  /* Maak de radioknoppen onzichtbaar */
+  iput[type="radio"] {
+    display: none;
+  }
+  
+  /* Style de labels zodat ze als knoppen functioneren */
+  .toggle-label {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    background-color: #f5eb71;
+    margin-top: 50px;
+ 
+  }
+  
+  /* De toggle zelf */
+  .toggle {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    pointer-events: none;
+    left: 35px;
+    
+  }
+  
+  /* Het ronde blokje in de toggle */
+  .circle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+ 
+  
+  /* De container krijgt een breedte van 200px */
+  .toggle-container {
+   
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 
-
-
-
-/* @keyframes scaleStars {
-    0% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1.15);
-    }
-} */
+  }
+  
