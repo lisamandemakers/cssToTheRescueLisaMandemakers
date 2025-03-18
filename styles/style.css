@@ -58,6 +58,7 @@ body>main>section:first-of-type>div:first-child {
     max-width: 400px;
   top: cqw;
   scale: 0.7;
+  top: 40%;
   
 
 
@@ -345,7 +346,7 @@ section:nth-of-type(2) {
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: -4em;
+    top: -2em;
 
 
 }
@@ -364,7 +365,7 @@ section:nth-of-type(2) {
 
 /* toggle container */
 section:nth-of-type(2)>div:first-of-type {
-    margin: 3vw;
+    margin: 5.3vw;
     display: flex;
     gap: 10px;
     /* background-color: #c62387; */
