@@ -44,6 +44,11 @@ Ik heb hier veel notities over gemaakt in mijn boekje en toegepast op mijn eigen
 Zo ziet hij er nu uit.![Afbeelding](readmeimg/dogweek2.png) 
 Ik liep tegen een paar dingen aan. Het centreren van de hond. Het postioneren van alle vormen en de lagen met z-index werkende maken. Het maken van de ogen had ik eerst  met `::before` en `::after` elementen gedaan. Maar later kwam ik er achterd dat ik met radial gradients heel makkelijk circulaire vormen kan toevoegen aan het hoofd van de hond. 
 
+### Gradients gebruiken ipv pseudo elements 
+Toen ik in week 1 begon aan mijn hond had ik de ogen op deze manier gemaakt: ![Afbeelding](readmeimg/eyes1.0-code.png) op twee verschillende manieren. Ik heb nu wel geleerd hoe de `box-shadow` werkt, maar ideaal vond ik het niet om de ogen op 2 verschillende manieren te moeten maken. A.g ik er bijvoorbeeld niet makkelijk mee kan animeren. Ik koos ervoor om de ogen weg t halen en ze gewoon de maken met `radial-gradients`.  ![Afbeelding](readmeimg/eyes2.0-code.png)
+
+
+
 ## Week 3
 Ik ben nu tevreden met hoe de hond eruit ziet en ga me nu focussen op:
 * De control panel 
@@ -125,6 +130,8 @@ Hier zie je dat op de de plek van het aantal procent van de grootte van het ook 
 } 
 ```
 Op deze manier kan ik gewoon animeren met de groottes van de gradients!
+
+
 
 
 
