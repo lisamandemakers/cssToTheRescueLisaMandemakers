@@ -26,7 +26,7 @@ html {
 
 @font-face {
     font-family: 'bubblyfont'; /* Kies een naam voor je font */
-    src: url('fonts/bubblyfont.ttf') format('truetype'); /* Pad naar je TTF bestand */
+    src: url('/fonts/bubblyfont.ttf') format('truetype'); /* Pad naar je TTF bestand */
     font-weight: normal; /* Optioneel, kan worden aangepast */
     font-style: normal; /* Optioneel, kan worden aangepast */
 }
@@ -893,7 +893,6 @@ section:nth-of-type(2)>div:nth-child(4) label:has(input[type="radio"]:checked) {
         -6px -6px 12px #ffffff;
     transform: scale(1.05);
 }
-
 
 
 /* Wel mee geëxperimenteerd, maar werkt niet zoals ik wil */
