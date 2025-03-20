@@ -107,7 +107,7 @@ Ik moest alles weer helemaal opnieuw omrekenen hiermee (alles moest 2.5x vergoot
 ### CSS nesting
 Tijdens dit project heb ik kennis gemaakt met nesting in css. Ik vind ook dit een hele fijne en efficiente manier van werke, omdat het je regels code bespaard en alles fijn bij elkaar hebt staan.
 ![Afbeelding](readmeimg/cqw-code.png)
-![Afbeelding](readmeimg/cqw-code.png)
+![Afbeelding](readmeimg/flowers.png)
 Zo heb ik hier allemaal verschillende keertjes en maten kunnen toevoegen door te nesten. Ook heb ik alle `::before` en `::after` elementen genest.
 
 
