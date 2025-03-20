@@ -26,7 +26,7 @@ html {
 
 @font-face {
     font-family: 'bubblyfont'; /* Kies een naam voor je font */
-    src: url('/fonts/bubblyfont.ttf') format('truetype'); /* Pad naar je TTF bestand */
+    src: url('fonts/bubblyfont.ttf') format('truetype'); /* Pad naar je TTF bestand */
     font-weight: normal; /* Optioneel, kan worden aangepast */
     font-style: normal; /* Optioneel, kan worden aangepast */
 }
