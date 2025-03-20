@@ -138,14 +138,19 @@ Ik ben er blij met het eind resultaat. Ik had niet gedacht 4 weken geleden dat i
 
 Het gebruik van media queries was een ander belangrijk aspect. Door mijn ontwerp responsive te maken, kon ik ervoor zorgen dat de pagina op verschillende schermformaten goed werkte, wat het gebruikersgemak alleen maar verbeterde.
 
+![Afbeelding](readmeimg/daymode.png) 
+![Afbeelding](readmeimg/nightmode.png) 
+
+
 
 ## Bronnenlijst
-[Dog inspo](https://www.youtube.com/watch?v=XN3KWtbVYug&t=1557s)
-[Dot slider](https://www.thenoorhub.in/2022/01/pure-css-range-slider-pure-css-dot.html)
-[Wave animation](https://codepen.io/rstacruz/pen/oxJqNv)
-[Zon en maan](https://codepen.io/gvissing/pen/XWVpjJd)
-[Workshop met Sanne voor style queries](https://codepen.io/shooft/pen/OJGNKJz*/)
-[Range sliders]( https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ )
+
+* [Dog inspo](https://www.youtube.com/watch?v=XN3KWtbVYug&t=1557s)
+* [Dot slider](https://www.thenoorhub.in/2022/01/pure-css-range-slider-pure-css-dot.html)
+* [Wave animation](https://codepen.io/rstacruz/pen/oxJqNv)
+* [Zon en maan](https://codepen.io/gvissing/pen/XWVpjJd)
+* [Workshop met Sanne voor style queries](https://codepen.io/shooft/pen/OJGNKJz*/)
+* [Range sliders]( https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ )
 
 
 
