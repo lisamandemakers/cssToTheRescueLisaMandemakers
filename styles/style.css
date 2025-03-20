@@ -24,6 +24,18 @@ html {
     initial-value: 9%;
 }
 
+@font-face {
+    font-family: 'bubblyfont'; /* Kies een naam voor je font */
+    src: url('/fonts/bubblyfont.ttf') format('truetype'); /* Pad naar je TTF bestand */
+    font-weight: normal; /* Optioneel, kan worden aangepast */
+    font-style: normal; /* Optioneel, kan worden aangepast */
+}
+
+/* Nu kun je het font gebruiken in je CSS */
+body {
+    font-family: 'bubblyfont', sans-serif; /* Zorg ervoor dat je het font ook toepast op je elementen */
+}
+
 
 * {
     margin: 0;
@@ -34,6 +46,20 @@ main {
     /* height: 100vh; */
     flex-direction: column;
     display: flex;
+    align-items: center;
+
+}
+
+
+main h1:first-of-type {
+    position: absolute;
+    top: 2em;
+    z-index: 1;
+    font-size: 7vw;
+    font-weight: 400;
+color: white;
+  
+
 
 }
 
@@ -339,6 +365,12 @@ flex-direction: column;
      gap: 0em;
      flex-wrap: wrap;
     }
+
+    main h1:first-of-type {
+        font-size: 4vw;
+    }
+
+
   }
 
 /*//////////////////////pull up & pull down////////////////// */
