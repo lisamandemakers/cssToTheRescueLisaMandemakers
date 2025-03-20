@@ -45,8 +45,7 @@ Zo ziet hij er nu uit.![Afbeelding](readmeimg/dogweek2.png)
 Ik liep tegen een paar dingen aan. Het centreren van de hond. Het postioneren van alle vormen en de lagen met z-index werkende maken. Het maken van de ogen had ik eerst  met `::before` en `::after` elementen gedaan. Maar later kwam ik er achterd dat ik met radial gradients heel makkelijk circulaire vormen kan toevoegen aan het hoofd van de hond. 
 
 ### Gradients gebruiken ipv pseudo elements 
-Toen ik in week 1 begon aan mijn hond had ik de ogen op deze manier gemaakt: ![Afbeelding](readmeimg/eyes1.0-code.png) op twee verschillende manieren. Ik heb nu wel geleerd hoe de `box-shadow` werkt, maar ideaal vond ik het niet om de ogen op 2 verschillende manieren te moeten maken. A.g ik er bijvoorbeeld niet makkelijk mee kan animeren. Ik koos ervoor om de ogen weg t halen en ze gewoon de maken met `radial-gradients`.  ![Afbeelding](readmeimg/eyes2.0-code.png)
-
+Toen ik in week 1 begon aan mijn hond had ik de ogen op deze manier gemaakt: ![Afbeelding](readmeimg/eyes1.0-code.png) op twee verschillende manieren. Ik heb nu wel geleerd hoe de `box-shadow` werkt, maar ideaal vond ik het niet om de ogen op 2 verschillende manieren te moeten maken. A.g ik er bijvoorbeeld niet makkelijk mee kan animeren. Ik koos ervoor om de ogen weg t halen en ze gewoon de maken met `radial-gradients`.  ![Afbeelding](readmeimg/eyes2.0.png)
 
 
 ## Week 3
@@ -93,6 +92,9 @@ Ik vond het niet moeilijk om de buttons te stijlen, maar om ze daadwerklijk het 
 Voor de volgende control panel item wilde ik een slider maken, die dan een bakje water vult van de hond. Ik heb aan het begin geëxperimenteerd met hbet gebruiken van een `input=range` maar ik kwam er achter dan je om de waardes te berekenen JavaScript nodig hebt. Dus ging ik opzoek naar een ander alternatief om dit op te lossen. Ik kwam uit bij [deze tutorial](https://www.thenoorhub.in/2022/01/pure-css-range-slider-pure-css-dot.html) gebruikt radio buttons om de slider te maken: ![Afbeelding](readmeimg/dotslider.png). Ik heb hem op deze manier gestijld en zo ziet hij er nu uit: 
 ![Afbeelding](readmeimg/waterslide.png)
 
+### Werken zonder classes 
+Ik merk dat het me wel goed afgaat om zonder classes te werken. het enige wat ik irritant vind is de `nth-of-...` selector, omdat ik dan niet zomaar een `<div></div>` of iets anders kan toevoegen omdat dat dan de hele volgorde aanpas
+
 ## Week 4
 
 ### CSS Style containers
@@ -130,6 +132,21 @@ Hier zie je dat op de de plek van het aantal procent van de grootte van het ook 
 } 
 ```
 Op deze manier kan ik gewoon animeren met de groottes van de gradients!
+
+## Resultaten
+Ik ben er blij met het eind resultaat. Ik had niet gedacht 4 weken geleden dat ik dit had kunnen neerzetten. k ben vooral trots op het werken met custom properties in CSS. Het maakte het veel makkelijker om kleuren en stijlen consistent toe te passen en tegelijkertijd flexibel te blijven in het aanpassen van het ontwerp.
+
+Het gebruik van media queries was een ander belangrijk aspect. Door mijn ontwerp responsive te maken, kon ik ervoor zorgen dat de pagina op verschillende schermformaten goed werkte, wat het gebruikersgemak alleen maar verbeterde.
+
+
+## Bronnenlijst
+[Dog inspo](https://www.youtube.com/watch?v=XN3KWtbVYug&t=1557s)
+[Dot slider](https://www.thenoorhub.in/2022/01/pure-css-range-slider-pure-css-dot.html)
+[Wave animation](https://codepen.io/rstacruz/pen/oxJqNv)
+[Zon en maan](https://codepen.io/gvissing/pen/XWVpjJd)
+[Workshop met Sanne voor style queries](https://codepen.io/shooft/pen/OJGNKJz*/)
+[Range sliders]( https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ )
+
 
 
 
