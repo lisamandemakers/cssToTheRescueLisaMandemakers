@@ -90,19 +90,26 @@ Voor de volgende control panel item wilde ik een slider maken, die dan een bakje
 
 ## Week 4
 
-### style containers
+### CSS Style containers
 Deze week ben ik begonnen met gebruiken van style containers, voor de "day en night" modus. Hier heb ik de volgende code voor geschreven:
 
 ![Afbeelding](readmeimg/style-query1.0.png) hier zie je dat wanneer er op de value van "day" wordt geklikt er een custom property "true" wordt en wanneer dat gebeurd wordt de volgende style query aangeroepen:  ![Afbeelding](readmeimg/style-query2.0.png)
 
 Ik vind dit een fijne manier van werken omdat je gelijk allemaal HTML lementen kan aanspreken terwijl je maar 1 button checked. 
 
-### container queries
+### CSS Container queries
 Ik kwam er na een tijd niet uit hoe ik de hond goed kon laten meeschalen met het beeld. Ik had op elk onderdeel van de hond de `vw` unity gebruik, wat betekent dat de hond meeschaalde op basis van de breedte van het scherm. Dit wilde ik niet want dat werd de hond veel te groot. ![Afbeelding](readmeimg/vw-code.png)
 
 Ik wilde dat hij zich zou aanpassen aan de parent container dus heb ik de `cqw` unit gebruikt. ![Afbeelding](readmeimg/cqw-code.png)
 
 Ik moest alles weer helemaal opnieuw omrekenen hiermee (alles moest 2.5x vergoot) en toen werd het hondje eindelijk mooi geschaald als hoe ik het wilde.
+
+### CSS nesting
+Tijdens dit project heb ik kennis gemaakt met nesting in css. Ik vind ook dit een hele fijne en efficiente manier van werke, omdat het je regels code bespaard en alles fijn bij elkaar hebt staan.
+![Afbeelding](readmeimg/cqw-code.png)
+![Afbeelding](readmeimg/cqw-code.png)
+Zo heb ik hier allemaal verschillende keertjes en maten kunnen toevoegen door te nesten. Ook heb ik alle `::before` en `::after` elementen genest.
+
 
 
 
