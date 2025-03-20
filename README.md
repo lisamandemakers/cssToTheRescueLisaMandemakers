@@ -121,8 +121,8 @@ Hier zie je dat op de de plek van het aantal procent van de grootte van het ook 
     syntax: '<percentage>';
     inherits: true;
     initial-value: 9%;
-}```
-
+} 
+```
 Op deze manier kan ik gewoon animeren met de groottes van de gradients!
 
 
