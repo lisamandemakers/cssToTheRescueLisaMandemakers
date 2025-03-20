@@ -110,6 +110,26 @@ Tijdens dit project heb ik kennis gemaakt met nesting in css. Ik vind ook dit ee
 ![Afbeelding](readmeimg/flowers.png)
 Zo heb ik hier allemaal verschillende keertjes en maten kunnen toevoegen door te nesten. Ook heb ik alle `::before` en `::after` elementen genest.
 
+### Animating gradients
+Ik wilde heel graag leren hoe je gradients kon animeren. Ik kon me nog iets herrinneren van de workshop van sanne met `@support`, maar ik kon niet meer zelf in stand brengen hoe het nou precies werkte. Ik vroeg eerst om hulp aan chat GPT, maar die gaf me oplossingen die niet werkte. Chat zei namelijk dit:
+![Afbeelding](readmeimg/eye-animation-code.png) 
+Dit werkte niet en dus vroeg ik om hulp aan Nils, de docent. Hij gaf me een veel betere oplossing met custom properties: 
+![Afbeelding](readmeimg/eyes2.0.png) 
+Hier zie je dat op de de plek van het aantal procent van de grootte van het ook nu een custom properthy staat met: `var(--eye-size)` die ik heb gedefineerd op deze manier: 
+
+``` @property --eye-size {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 9%;
+}```
+
+Op deze manier kan ik gewoon animeren met de groottes van de gradients!
+
+
+
+
+
+
 
 
 
