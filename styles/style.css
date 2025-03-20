@@ -1,8 +1,23 @@
 html {
-    --halsband: #f977c5;
+    /* colors */
+    --clr-collar: #f977c5;
+    --clr-grass: #9de8a7;
+    --clr-sky: rgb(96, 215, 254);
+    --clr-leaves: #fff1f6;
+
+    /* height: section 1 */
+    --heightbackground: 100vh;
+
+    /* mouth positions */
+    --mouth-rotation: 0deg;
+    --mouth-border: 1.25cqw solid #000000;
+
+    /* water heights */
+    --waterlevel: 50%;
 
 }
 
+/* eye size of dog */
 @property --eye-size {
     syntax: '<percentage>';
     inherits: true;
@@ -15,24 +30,18 @@ html {
 }
 
 
-
 main {
     /* height: 100vh; */
     flex-direction: column;
     display: flex;
 
-
-
-
 }
 
-:root {
-    --clr-grass: #9de8a7;
-    --clr-sky: rgb(96, 215, 254);
-    --heightbackground: 100vh;
-    --clr-leaves: #fff1f6;
-}
 
+/* 
+//////////////////////////////////////////////////////////
+-------------------------BACKGROUND-----------------------
+/////////////////////////////////////////////////////// */
 
 section:nth-of-type(1) {
     background-color: rgb(17, 17, 17);
@@ -50,16 +59,19 @@ section:nth-of-type(1) {
     z-index: -1;
 }
 
+
 /* 
 //////////////////////////////////////////////////////////
 ---------------------🐶🐶🐶HONDJE🐶🐶🐶---------------------
 /////////////////////////////////////////////////////// */
+/* BRON DOG INPSO:
+https://www.youtube.com/watch?v=XN3KWtbVYug&t=1557s
+
 /* dog */
 body>main>section:first-of-type>div:first-child {
     position: absolute;
     /* background-color: #c6c023; */
     height: 50%;
-    /* width: 100%; */
     container-type: inline-size;
     width: 60cqw;
     max-width: 400px;
@@ -67,45 +79,11 @@ body>main>section:first-of-type>div:first-child {
     scale: 0.7;
     top: 40%;
 
-
-
-
 }
-
-
-
-@keyframes oogBeweging {
-    0% {
-        background-position:
-            70% 60%, 30% 60%, 50% 70%,
-            31% 44%, 36% 48%, 61% 44%, 65.5% 48%,
-            33% 46%, 63% 46%, 63% 60%;
-    }
-
-    50% {
-        background-position:
-            72% 62%, 28% 62%, 50% 70%,
-            /* Ogen bewegen */
-            30% 45%, 37% 47%, 60% 45%, 66% 47%,
-            /* Witte highlights */
-            35% 48%, 65% 48%, 63% 62%;
-        /* Pupillen */
-    }
-
-    100% {
-        background-position:
-            70% 60%, 30% 60%, 50% 70%,
-            31% 44%, 36% 48%, 61% 44%, 65.5% 48%,
-            33% 46%, 63% 46%, 63% 60%;
-    }
-}
-
 
 /* Head */
 main>section:first-of-type>div:first-of-type div:first-child {
     width: 50cqw;
-
-
     aspect-ratio: 1;
     background-color: rgb(242, 205, 171);
     border-radius: 50%;
@@ -113,7 +91,6 @@ main>section:first-of-type>div:first-of-type div:first-child {
     z-index: 5;
     left: 25cqw;
     top: 1cqw;
-
     background-image:
         radial-gradient(ellipse 50% 30% at 70% 60%, rgb(238, 180, 213) 15%, transparent 0),
         radial-gradient(ellipse 50% 30% at 30% 60%, rgb(238, 180, 213) 15%, transparent 0),
@@ -129,12 +106,14 @@ main>section:first-of-type>div:first-of-type div:first-child {
 }
 
 @keyframes eyes {
-    from { --eye-size: 9%; }
-    to { --eye-size: 12%; }
+    from {
+        --eye-size: 9%;
+    }
+
+    to {
+        --eye-size: 12%;
+    }
 }
-
-
-
 
 /* Ear Left */
 main>section:first-of-type>div:first-of-type div:first-child::before {
@@ -146,9 +125,7 @@ main>section:first-of-type>div:first-of-type div:first-child::before {
     position: absolute;
     top: -1cqw;
     left: -7cqw;
-
 }
-
 
 /* Ear Right */
 main>section:first-of-type>div:first-of-type div:first-child::after {
@@ -161,43 +138,7 @@ main>section:first-of-type>div:first-of-type div:first-child::after {
     top: -1cqw;
     left: 32cqw;
     transform: rotate(90deg);
-
 }
-
-
-/* Eyes */
-/* main>section:first-of-type>div:first-of-type div:nth-child(2) {
-    width: 3vw;
-    aspect-ratio: 1;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 9vw;
-    right: 1.9vw;
-    box-shadow: 6vw 0 black;
-    background-image:
-        radial-gradient(at 33% 33%, white 14%, transparent 0), */
-/*eerste oog highlights met gradient */
-/* radial-gradient(at 66% 66%, white 12%, black 0);
-    z-index: 2;
-} */
-
-
-
-/* Second eye highlights with ::after en box shadow */
-/* main>section:first-of-type>div:first-of-type div:nth-child(2)::after {
-    content: "";
-    width: 0.8vw;
-    aspect-ratio: 1;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    position: absolute;
-    top: 0.7vw;
-    left: 6.6vw;
-    box-shadow: 1vw 1vw rgb(255, 255, 255);
-} */
-
-
 
 /* Nose */
 main>section:first-of-type>div:first-of-type div:nth-child(3) {
@@ -211,6 +152,7 @@ main>section:first-of-type>div:first-of-type div:nth-child(3) {
     z-index: 6;
 }
 
+/* nose highlight */
 main>section:first-of-type>div:first-of-type div:nth-child(3)::before {
     content: "";
     width: 6cqw;
@@ -220,7 +162,6 @@ main>section:first-of-type>div:first-of-type div:nth-child(3)::before {
     position: absolute;
     top: 0.75cqw;
     left: 1.25cqw;
-
 }
 
 /* Mouth */
@@ -240,17 +181,19 @@ main>section:first-of-type>div:first-of-type div:nth-child(4) {
     rotate: var(--mouth-rotation);
 }
 
+/* Mouth dot left */
 main>section:first-of-type>div:first-of-type div:nth-child(4)::before {
     content: "";
     height: 1.25cqw;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     position: inherit;
     left: -1.2cqw;
-    top: -0.4cqw;
+    top: -0.3cqw;
 }
 
+/* Mouth dot right */
 main>section:first-of-type>div:first-of-type div:nth-child(4)::after {
     content: "";
     height: 1.25cqw;
@@ -262,30 +205,19 @@ main>section:first-of-type>div:first-of-type div:nth-child(4)::after {
     top: -0.4cqw;
 }
 
-
-/* Halsband */
+/* collar */
 main>section:first-of-type>div:first-of-type div:nth-child(5) {
     width: 40cqw;
     height: 15cqw;
     position: absolute;
-    background-color: var(--halsband);
+    background-color: var(--clr-collar);
     z-index: 3;
     border-radius: 0 0 50% 50%;
     top: 40.6cqw;
     left: 30cqw;
 }
 
-/* .halsband::before {
-    content: "";
-    height:10vw;
-    width: 10vw;
-    background-color:aqua;
-    position: absolute;
-
-} */
-
-
-/* lijf */
+/* Body */
 main>section:first-of-type>div:first-of-type div:nth-child(6) {
     height: 57.5cqw;
     aspect-ratio: 1 / 1.1;
@@ -304,13 +236,8 @@ main>section:first-of-type>div:first-of-type div:nth-child(6) {
         radial-gradient(ellipse 1% 5% at 73% 55%, rgb(38, 18, 3)50%, transparent 0%),
         radial-gradient(ellipse 20% 30% at 70% 44%, rgb(201, 117, 58)50%, transparent 0%),
         radial-gradient(ellipse 20% 30% at 30% 44%, rgb(201, 117, 58)50%, transparent 0%),
-
-
-
-
         radial-gradient(ellipse 100% 100% at 70% 70%, rgb(242, 205, 171) 100%, transparent 0)
 }
-
 
 /* flowers */
 main>section:first-of-type>div:nth-of-type(3),
@@ -329,13 +256,12 @@ main>section:first-of-type>div:nth-of-type(7) {
         -2vw -3vw 0 0 var(--clr-leaves),
         2vw -3vw 0 0 var(--clr-leaves),
         2vw 3vw 0 0 var(--clr-leaves),
-        -2vw 3vw 0 0  var(--clr-leaves),
+        -2vw 3vw 0 0 var(--clr-leaves),
         3.4vw 0px 0 0 var(--clr-leaves),
         -3.5vw 0px 0 0 var(--clr-leaves);
-    background: var(--halsband);
-    animation: rotate 15s linear infinite;
+    background: var(--clr-collar);
+    animation: rotate-flowers 15s linear infinite;
     scale: 0.5;
-
 
     &:nth-of-type(4) {
         left: 60%;
@@ -361,50 +287,86 @@ main>section:first-of-type>div:nth-of-type(7) {
         top: 80%;
         background-color: #c62387;
         scale: 0.8;
-
-
     }
-
-
-
 }
 
-
-@keyframes rotate {
+/* rotating flowers */
+@keyframes rotate-flowers {
     100% {
         transform: rotate(360deg);
     }
 }
 
-main>section:first-of-type>div:nth-of-type(4) {
-    left: 50%;
-}
 
 /* 
 //////////////////////////////////////////////////////////
 ----------------✨✨✨ CONTROL PANEL ✨✨✨-----------------
 /////////////////////////////////////////////////////// */
 
-
 section:nth-of-type(2) {
     background: #ededed;
-    height: 1000px;
+  height: 400px;
     width: 100%;
     border-radius: 50px 50px 0 0;
-    /* border: 1px solid; */
     display: flex;
-    flex-direction: column;
+ justify-content: center;
     align-items: center;
     position: relative;
     top: -2em;
+    padding:2em 0;
+    gap: 0em;
+flex-direction: column;
+    flex-wrap: wrap;
+}
 
+@media (min-width: 1200px) {
 
 }
 
+@media (min-width: 600px) {
+    section:nth-of-type(2) {
+     flex-direction: row;
+     height: 300px;
+     background: #ededed;
+     width: 100%;
+     border-radius: 50px 50px 0 0;
+     display: flex;
+  justify-content: center;
+     align-items: center;
+     position: relative;
+     top: -2em;
+     padding:2em 0;
+     gap: 0em;
+     flex-wrap: wrap;
+    }
+  }
 
-/* pull button */
+/*//////////////////////pull up & pull down////////////////// */
+/* pull up & down button */
+section:nth-of-type(2) div:nth-child(3) {
+    position: absolute;
+    top: -45px;
+}
 
+/* pull up & down button */
+section:nth-of-type(2) div:nth-child(3) label {
+    /* background-color: #2361c6; */
+    appearance: none;
+    padding: 40px;
+    border-bottom: 4px solid #9e9e9e;
+    cursor: pointer;
+    height: var(--heightbackground);
+}
 
+/* hide real checkbox */
+section:nth-of-type(2) div:nth-child(3) input[type="checkbox"] {
+    display: none;
+}
+
+/* change height value of first section*/
+body:has(input[value="change-height"]:checked) {
+    --heightbackground: 60vh;
+}
 
 
 /* 
@@ -412,82 +374,67 @@ section:nth-of-type(2) {
 ---------------------MOOD TOGGLE BTNS---------------------
 /////////////////////////////////////////////////////// */
 
-
 /* toggle container */
 section:nth-of-type(2)>div:first-of-type {
     margin: 5.3vw;
     display: flex;
     gap: 10px;
-    /* background-color: #c62387; */
 }
 
-/* Verberg de echte radio buttons */
+/* Hide real radio buttons */
 section:nth-of-type(2)>div:first-of-type input[type="radio"] {
     display: none;
 }
 
-/* section:nth-of-type(2) div:first-child label  */
-/* Stijl de labels als knoppen */
+/* Styling labels as btns */
 section:nth-of-type(2)>div:first-of-type label {
-    font-size: 2rem;
+    font-size: 1.5rem;
     background: #ededed;
     box-shadow: 4px 4px 8px #c9c9c9,
         -4px -4px 8px #ffffff;
     text-align: center;
     display: flex;
     align-items: center;
-    /* Centreert verticaal */
     justify-content: center;
     height: 2em;
     aspect-ratio: 1;
     cursor: pointer;
-    /* border: 2px solid #ccc; */
     border-radius: 50%;
     transition: all 0.2s ease-in-out;
 }
 
-/* Als de radio is geselecteerd, geef een ingedrukte stijl */
-
+/* active radio-btn */
 section:nth-of-type(2)>div:first-of-type label:has(input[type="radio"]:checked) {
-    /* border-radius: 114px; */
-    border-radius: 114px;
+    border-radius: 50%;
     background: linear-gradient(145deg, #d5d5d5, #fefefe);
     box-shadow: 4px 4px 8px #c9c9c9,
         -4px -4px 8px #ffffff;
     transform: scale(1.1);
 }
 
-
-:root {
-    --mouth-rotation: 0deg;
-    --mouth-border: 1.25cqw solid #000000;
-
-}
-
+/* btn: neutral */
 body:has([value="neutral"]:checked) section:first-of-type>div:first-of-type div:nth-child(4) {
-
-    --mouth-border: 1.25cqw solid #000000;
+    --mouth-border: 1.20cqw solid #000000;
     border-radius: 2%;
     border-left: none;
     border-right: none;
     left: 47cqw;
     transition: 0.1s ease-in-out;
 
-
     &::after {
         background-color: #000000;
-        top: 1.5vw;
-        right: -0.3vw;
+        left: 6cqw;
+        top: 3.6cqw;
     }
 
     &::before {
         background-color: #000000;
-        top: 1.5vw;
-        left: -0.3vw;
+        left: -0.1cqw;
+        top: 3.6cqw;
     }
 }
 
-
+/* btn: sad */
 body:has([value="sad"]:checked) section:first-of-type>div:first-of-type div:nth-child(4) {
     --mouth-rotation: 180deg;
 }
@@ -500,6 +447,7 @@ body:has([value="sad"]:checked) section:first-of-type>div:first-of-type div:nth-
 /* BRON DOT SLIDER:
  https://www.thenoorhub.in/2022/01/pure-css-range-slider-pure-css-dot.html */
 
+/* water slider container general */
 main section:nth-of-type(2) form {
     width: 100%;
     display: flex;
@@ -511,12 +459,14 @@ main section:nth-of-type(2) form {
 
 }
 
-main section:nth-of-type(2) form #form-title {
+/* water slider title */
+main section:nth-of-type(2) form h2 {
     margin-top: 0;
     font-weight: bold;
     align-items: center;
 }
 
+/* water slider container */
 main section:nth-of-type(2) form>div:first-of-type {
     display: flex;
     flex-direction: row;
@@ -526,6 +476,7 @@ main section:nth-of-type(2) form>div:first-of-type {
     height: 50px;
 }
 
+/* actual slider */
 main section:nth-of-type(2) form>div:first-of-type::before {
     content: "";
     position: absolute;
@@ -539,13 +490,7 @@ main section:nth-of-type(2) form>div:first-of-type::before {
         -3px -3px 5px #ffffff;
 }
 
-main section:nth-of-type(2) form>div:first-of-type input,
-main section:nth-of-type(2) form>div:first-of-type label {
-    box-sizing: border-box;
-    flex: 1;
-    cursor: pointer;
-}
-
+/* water slider labels */
 main section:nth-of-type(2) form>div:first-of-type label {
     display: inline-block;
     position: relative;
@@ -553,6 +498,7 @@ main section:nth-of-type(2) form>div:first-of-type label {
     height: 100%;
 }
 
+/* water slider labels text */
 main section:nth-of-type(2) form>div:first-of-type label::before {
     content: attr(data-dot-amount);
     position: absolute;
@@ -567,9 +513,15 @@ main section:nth-of-type(2) form>div:first-of-type label::before {
     transition: all 0.15s ease-in-out;
     font-family: Arial, Helvetica, sans-serif;
 
-
 }
 
+/* water slider labels active text */
+main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::before {
+    font-weight: 800;
+    opacity: 1;
+}
+
+/* water slider labels dot */
 main section:nth-of-type(2) form div:first-of-type label::after {
     content: "";
     position: absolute;
@@ -578,7 +530,6 @@ main section:nth-of-type(2) form div:first-of-type label::after {
     transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
-    /* border: 2px solid #d11d1d; */
     background: #ededed;
     box-shadow: 3px 3px 5px #c9c9c9,
         -3px -3px 5px #ffffff;
@@ -589,124 +540,74 @@ main section:nth-of-type(2) form div:first-of-type label::after {
     transition: all 0.15s ease-in-out;
 }
 
+/* hover dot */
 main section:nth-of-type(2) form div:first-of-type label:hover::after {
     transform: translate(-50%, -50%) scale(1.25);
 }
 
-main section:nth-of-type(2) form div:first-of-type input:checked+label::before {
-    font-weight: 800;
-    opacity: 1;
-}
-
-
 /* active btn */
 main section:nth-of-type(2) form div:first-of-type input:checked+label::after {
     transform: translate(-50%, -50%) scale(1.2);
-    /* border: 2px solid #000; */
-    border-radius: 114px;
+    border-radius: 50%;
     background: linear-gradient(145deg, #d5d5d5, #fefefe);
     box-shadow: 3px 3px 5px #c9c9c9,
         -3px -3px 5px #ffffff;
 }
 
+/* active selected middle button */
+main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::after {
+    transform: translate(-50%, -50%) scale(1.2);
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--clr-collar) 25%, transparent 0),
+        linear-gradient(145deg, #d5d5d5, #fefefe);
+    box-shadow: 3px 3px 5px #c9c9c9, -3px -3px 5px #ffffff;
+
+}
+
+/* actual input display: none */
 form div:first-of-type input {
     display: none;
 }
 
-form div:first-of-type input:checked~div {
-    opacity: 1;
-    background-color: #c62387;
-    height: 2em;
-}
+/* --------- */
+/* WATER BOWL */
+/* --------- */
+/* BRON WAVE ANIMATION:
+https://codepen.io/rstacruz/pen/oxJqNv */
 
-form div:first-of-type>div {
-    display: block;
-    position: absolute;
-    top: 50%;
-    width: 12px;
-    height: 12px;
-    background-color: var(--halsband);
-    border-radius: 50%;
-    transition: all 0.15s ease-in-out;
-    transform: translate(-50%, -50%);
-    /* border: 2px solid #fff; */
-    opacity: 0;
-    z-index: 2;
-}
-
-form div:first-of-type input:checked:nth-child(1)~div {
-    left: 10%;
-}
-
-form div:first-of-type input:checked:nth-child(3)~div {
-    left: 30%;
-}
-
-form div:first-of-type input:checked:nth-child(5)~div {
-    left: 50%;
-}
-
-form div:first-of-type input:checked:nth-child(7)~div {
-    left: 70%;
-}
-
-form div:first-of-type input:checked:nth-child(9)~div {
-    left: 90%;
-}
-
-
-
-
-
-/* WATERBAK */
 main>section:first-of-type>div:nth-child(2) {
     background-color: white;
     position: relative;
     margin-top: 100px;
 }
 
-/* Waterbak container */
+/* water bowl container */
 main>section:first-of-type>div:nth-child(2)>div:first-child {
-    background-color: #c62387;
     height: 8vw;
     aspect-ratio: 20 / 9;
     max-height: 100px;
-
     position: absolute;
-    top: 1vh;
+    top: 13vw;
     left: 30vw;
     clip-path: polygon(10% 100%, 90% 100%, 100% 20%, 0 20%);
-
 }
 
-/* Water in de bak (ellips die uitsteekt) */
-/* main>section:first-of-type>div:nth-child(2)>div:nth-child(2) { */
-/* content: "";
-    width: vw;
-    height: 6vw;
-    position: absolute;
-    top: 1vw; */
-/* Zorgt ervoor dat de ellips BOVEN de bak uitsteekt */
-/* left: 0;
-    border-radius: 60% / 80%;
-    z-index: 18; */
-/* Zorgt ervoor dat het boven de bak blijft */
-/* } */
+@media (min-width: 1200px) {
+    main>section:first-of-type>div:nth-child(2)>div:first-child {
+        top: 5vw;
 
-
-.wrapper {
+}
+}
+/* waterbowl background */
+main>section:first-of-type>div:nth-child(2)>div:first-child {
     position: absolute;
     transform: translate(-50%, -50%);
     border-radius: 5px;
     background-image: linear-gradient(#3f37dc, #5c97db);
-
 }
 
-:root {
-    --waterlevel: 50%;
-}
-
-.wave {
+/* moving water (wave) */
+main>section:first-of-type>div:nth-child(2)>div:first-child>div {
     width: 35vw;
     height: 35vw;
     min-width: 300px;
@@ -731,116 +632,54 @@ main>section:first-of-type>div:nth-child(2)>div:first-child {
     }
 }
 
-body:has([value="1"]:checked) .wave {
+/* water levels */
+body:has([value="1"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
     --waterlevel: -20%;
 }
 
-body:has([value="2"]:checked) .wave {
+body:has([value="2"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
     --waterlevel: 10%;
 }
 
-body:has([value="3"]:checked) .wave {
+body:has([value="3"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
     --waterlevel: 40%;
 }
 
-body:has([value="4"]:checked) .wave {
+body:has([value="4"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
     --waterlevel: 50%;
 }
 
-body:has([value="5"]:checked) .wave {
+body:has([value="5"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
     --waterlevel: 80%;
 }
 
 
 
-main section:nth-of-type(2) form div:first-of-type label {
-    display: inline-block;
-    position: relative;
-    width: 20%;
-    height: 100%;
-    cursor: pointer;
-}
+/* 
+//////////////////////////////////////////////////////////
+---------------------- DAY & NIGHT BTNS ------------------
+/////////////////////////////////////////////////////// */
+/* BRON SUN AND MOON:
+    https://codepen.io/gvissing/pen/XWVpjJd */
+/* BRON STYLE QUERIES:
+    Workshop: met Sanne
+    https://codepen.io/shooft/pen/OJGNKJz*/
 
-
-
-
-main section:nth-of-type(2) form div:first-of-type label:hover::after {
-    transform: translate(-50%, -50%) scale(1.25);
-
-}
-
-main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::before {
-    font-weight: 800;
-    opacity: 1;
-    /* background-color: #3f37dc; */
-}
-
-main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::after {
-    transform: translate(-50%, -50%) scale(1.2);
-    border-radius: 114px;
-    background: radial-gradient(circle, var(--halsband) 25%, transparent 0),
-        linear-gradient(145deg, #d5d5d5, #fefefe);
-    box-shadow: 3px 3px 5px #c9c9c9, -3px -3px 5px #ffffff;
-
-}
-
-
-
-
-.sleep {
-    /* background-color: #c62387; */
-    position: absolute;
-    top: -45px;
-
-}
-
-
-.sleep label {
-    /* background-color: #2361c6; */
-    appearance: none;
-    padding: 40px;
-    border-bottom: 4px solid #9e9e9e;
-    cursor: pointer;
-    height: var(--heightbackground);
-    /* background-color: #5c97db; */
-
-
-}
-
-
-.sleep input[type="checkbox"] {
-    display: none;
-
-}
-
-body:has(input[value="hoi"]:checked) {
-    --heightbackground: 60vh;
-}
-
-
-/* DAY NIGHT SWITCH */
-
+/* Defining style queries */
 html:has([value="day"]:checked) {
-	--day:true;
+    --day: true;
 }
 
 html:has([value="night"]:checked) {
-	--night:true;
+    --night: true;
 }
 
-
-
-
-
-
-
-
+/* if [value="day"] is checked: */
 @container style(--day:true) {
-    main>section:first-of-type>div:nth-of-type(8)  {
+    main>section:first-of-type>div:nth-of-type(8) {
         height: 6em;
         width: 6em;
         border-radius: 50%;
-    
         background-color: #f1f5b8;
         position: absolute;
         top: 0;
@@ -848,21 +687,18 @@ html:has([value="night"]:checked) {
         right: 4vw;
         border: 5px solid #f5eb71;
         transition: 0.1s ease-in-out;
-    
-    
     }
-	
-	
 }
 
-
+/* if [value="night"] is checked: */
 @container style(--night:true) {
-	body {
+    body {
         --clr-sky: #2843c0;
         --clr-grass: #013c23;
-	}
+    }
 
-    main>section:first-of-type>div:nth-of-type(8)  {
+    /* moon */
+    main>section:first-of-type>div:nth-of-type(8) {
         height: 6em;
         width: 6em;
         border-radius: 50%;
@@ -873,8 +709,8 @@ html:has([value="night"]:checked) {
         right: 4vw;
         border: 5px solid #e4e4e4;
         transition: 0.1s ease-in-out;
-    
-    
+
+        /* moon dots */
         &::before {
             content: "";
             height: 1em;
@@ -884,22 +720,22 @@ html:has([value="night"]:checked) {
             border-radius: 50%;
             left: 25px;
             top: 10px;
-        
         }
-            &::after {
-                content: "";
-                height: 0.5em;
-                aspect-ratio: 1;
-                position: absolute;
-                background-color: #e4e4e4;
-                border-radius: 50%;
-                left: 15px;
-                top: 30px;
-        }}
 
+        &::after {
+            content: "";
+            height: 0.5em;
+            aspect-ratio: 1;
+            position: absolute;
+            background-color: #e4e4e4;
+            border-radius: 50%;
+            left: 15px;
+            top: 30px;
+        }
+    }
 
-            /* STARS */
-     main>section:first-of-type>div:nth-of-type(9) {
+    /* stars */
+    main>section:first-of-type>div:nth-of-type(9) {
         height: 0.3em;
         aspect-ratio: 1;
         border-radius: 50%;
@@ -909,34 +745,34 @@ html:has([value="night"]:checked) {
         margin-top: 2em;
         transition: 0.1s ease-in-out;
         box-shadow:
-   -8vw 9vh 0 0 #ffffff,
-    32vw 22vh 0 0 #ffffff,
-    -18vw 34vh 0 0 #ffffff,
-    23vw 28vh 0 0 #ffffff,
-    -47vw 7vh 0 0 #ffffff,
-    12vw 6vh 0 0 #ffffff,
-    -28vw 33vh 0 0 #ffffff,
-    52vw 29vh 0 0 #ffffff,
-    -42vw 24vh 0 0 #ffffff,
-    33vw 12vh 0 0 #ffffff,
-    -31vw 36vh 0 0 #ffffff,
-    54vw 31vh 0 0 #ffffff,
-    -16vw 21vh 0 0 #ffffff,
-    62vw 6vh 0 0 #ffffff,
-    -39vw 31vh 0 0 #ffffff,
-    28vw 27vh 0 0 #ffffff,
-    -26vw 31vh 0 0 #ffffff,
-    11vw 11vh 0 0 #ffffff,
-    -17vw 19vh 0 0 #ffffff,
-    51vw 12vh 0 0 #ffffff,
-    -59vw 32vh 0 0 #ffffff,
-    7vw 19vh 0 0 #ffffff,
-    -29vw 26vh 0 0 #ffffff,
-    47vw 35vh 0 0 #ffffff,
-    -19vw 32vh 0 0 #ffffff,
-    52vw 34vh 0 0 #ffffff,
-    -38vw 16vh 0 0 #ffffff,
-    32vw 6vh 0 0 #ffffff;
+            -8vw 9vh 0 0 #ffffff,
+            32vw 22vh 0 0 #ffffff,
+            -18vw 34vh 0 0 #ffffff,
+            23vw 28vh 0 0 #ffffff,
+            -47vw 7vh 0 0 #ffffff,
+            12vw 6vh 0 0 #ffffff,
+            -28vw 33vh 0 0 #ffffff,
+            52vw 29vh 0 0 #ffffff,
+            -42vw 24vh 0 0 #ffffff,
+            33vw 12vh 0 0 #ffffff,
+            -31vw 36vh 0 0 #ffffff,
+            54vw 31vh 0 0 #ffffff,
+            -16vw 21vh 0 0 #ffffff,
+            62vw 6vh 0 0 #ffffff,
+            -39vw 31vh 0 0 #ffffff,
+            28vw 27vh 0 0 #ffffff,
+            -26vw 31vh 0 0 #ffffff,
+            11vw 11vh 0 0 #ffffff,
+            -17vw 19vh 0 0 #ffffff,
+            51vw 12vh 0 0 #ffffff,
+            -59vw 32vh 0 0 #ffffff,
+            7vw 19vh 0 0 #ffffff,
+            -29vw 26vh 0 0 #ffffff,
+            47vw 35vh 0 0 #ffffff,
+            -19vw 32vh 0 0 #ffffff,
+            52vw 34vh 0 0 #ffffff,
+            -38vw 16vh 0 0 #ffffff,
+            32vw 6vh 0 0 #ffffff;
 
         &::before {
             content: "";
@@ -948,103 +784,138 @@ html:has([value="night"]:checked) {
             top: 0;
             margin-top: 2em;
             box-shadow:
-            -43vw 12vh 0 0 #ffffff,
-            27vw 28vh 0 0 #ffffff,
-            -55vw 25vh 0 0 #ffffff,
-            19vw 30vh 0 0 #ffffff,
-            -50vw 7vh 0 0 #ffffff,
-            9vw 22vh 0 0 #ffffff,
-            -32vw 28vh 0 0 #ffffff,
-            45vw 13vh 0 0 #ffffff,
-            -24vw 19vh 0 0 #ffffff,
-            11vw 9vh 0 0 #ffffff,
-            -18vw 31vh 0 0 #ffffff,
-            51vw 21vh 0 0 #ffffff,
-            -12vw 16vh 0 0 #ffffff,
-            58vw 33vh 0 0 #ffffff,
-            -38vw 23vh 0 0 #ffffff,
-            17vw 18vh 0 0 #ffffff,
-            -60vw 30vh 0 0 #ffffff,
-            25vw 27vh 0 0 #ffffff,
-            -44vw 5vh 0 0 #ffffff,
-            39vw 11vh 0 0 #ffffff,
-            -29vw 30vh 0 0 #ffffff,
-            50vw 16vh 0 0 #ffffff,
-            -47vw 19vh 0 0 #ffffff,
-            33vw 28vh 0 0 #ffffff,
-            -40vw 12vh 0 0 #ffffff,
-            53vw 26vh 0 0 #ffffff,
-            -15vw 18vh 0 0 #ffffff,
-            60vw 5vh 0 0 #ffffff;
-    
+                -43vw 12vh 0 0 #ffffff,
+                27vw 28vh 0 0 #ffffff,
+                -55vw 25vh 0 0 #ffffff,
+                19vw 30vh 0 0 #ffffff,
+                -50vw 7vh 0 0 #ffffff,
+                9vw 22vh 0 0 #ffffff,
+                -32vw 28vh 0 0 #ffffff,
+                45vw 13vh 0 0 #ffffff,
+                -24vw 19vh 0 0 #ffffff,
+                11vw 9vh 0 0 #ffffff,
+                -18vw 31vh 0 0 #ffffff,
+                51vw 21vh 0 0 #ffffff,
+                -12vw 16vh 0 0 #ffffff,
+                58vw 33vh 0 0 #ffffff,
+                -38vw 23vh 0 0 #ffffff,
+                17vw 18vh 0 0 #ffffff,
+                -60vw 30vh 0 0 #ffffff,
+                25vw 27vh 0 0 #ffffff,
+                -44vw 5vh 0 0 #ffffff,
+                39vw 11vh 0 0 #ffffff,
+                -29vw 30vh 0 0 #ffffff,
+                50vw 16vh 0 0 #ffffff,
+                -47vw 19vh 0 0 #ffffff,
+                33vw 28vh 0 0 #ffffff,
+                -40vw 12vh 0 0 #ffffff,
+                53vw 26vh 0 0 #ffffff,
+                -15vw 18vh 0 0 #ffffff,
+                60vw 5vh 0 0 #ffffff;
         }
-}
-main>section:first-of-type>div:nth-of-type(3),
-main>section:first-of-type>div:nth-of-type(4),
-main>section:first-of-type>div:nth-of-type(5),
-main>section:first-of-type>div:nth-of-type(6),
-main>section:first-of-type>div:nth-of-type(7) {
+    }
 
-    --clr-leaves: #17023a;
+    /* flowers changing color */
+    main>section:first-of-type>div:nth-of-type(3),
+    main>section:first-of-type>div:nth-of-type(4),
+    main>section:first-of-type>div:nth-of-type(5),
+    main>section:first-of-type>div:nth-of-type(6),
+    main>section:first-of-type>div:nth-of-type(7) {
+        --clr-leaves: #17023a;
+    }
+}
+
+/* day & night btn styling */
+section:nth-of-type(2)>div:nth-child(4) {
+    display: flex;
+    gap: 10px;
+    margin: 5.3vw;
+}
+
+/* hide real radio buttons */
+section:nth-of-type(2)>div:nth-child(4) input[type="radio"] {
+    display: none;
+}
+
+/* styling labels as btns */
+section:nth-of-type(2)>div:nth-child(4) label {
+    font-size: 1rem;
+    background: #ededed;
+    box-shadow: 4px 4px 8px #c9c9c9,
+        -4px -4px 8px #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 0 30px;
+    border-radius: 5px;
+}
+
+/* active btn styling */
+section:nth-of-type(2)>div:nth-child(4) label:has(input[type="radio"]:checked) {
+    background: linear-gradient(145deg, #d5d5d5, #fefefe);
+    box-shadow: 6px 6px 12px #c9c9c9,
+        -6px -6px 12px #ffffff;
+    transform: scale(1.05);
 }
 
 
-.circle{
-    transform: translateX(30px);
-}
+
+/* Wel mee geëxperimenteerd, maar werkt niet zoals ik wil */
+/* 
+//////////////////////////////////////////////////////////
+---------------------- RANGE SLIDERS ------------------
+/////////////////////////////////////////////////////// */
+/* BRON RANGE SLIDERS:
+   https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
+
+
+
+/* section:nth-of-type(2)>div:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start; 
+    & label {
+        display: block; 
+  margin-bottom: 0.5rem; 
 
     }
 
-  
-  /* Maak de radioknoppen onzichtbaar */
-  iput[type="radio"] {
-    display: none;
-  }
-  
-  /* Style de labels zodat ze als knoppen functioneren */
-  .toggle-label {
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    background-color: #f5eb71;
-    margin-top: 50px;
- 
-  }
-  
-  /* De toggle zelf */
-  .toggle {
-    position: absolute;
-    width: 60px;
-    height: 30px;
-    background-color: lightgray;
-    border-radius: 30px;
-    transition: background-color 0.3s;
-    pointer-events: none;
-    left: 35px;
-    
-  }
-  
-  /* Het ronde blokje in de toggle */
-  .circle {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
-  }
-  
- 
-  
-  /* De container krijgt een breedte van 200px */
-  .toggle-container {
-   
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+    & input[type="range"]::-webkit-slider-runnable-track {
+        background: #c9c9c9;
+        height: 1rem;
+        border-radius: 10px;
+        background: #ededed;
+        box-shadow: 2px 2px 4px #c9c9c9,
+            -2px -2px 4px #ffffff;
+    }
 
-  }
-  
+    & input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: var(--clr-collar);
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+
+
+    & input[type="range"]::-moz-range-track {
+        background: #c9c9c9;
+        height: 1rem;
+        border-radius: 30px;
+        background: #ededed;
+        box-shadow: 2px 2px 4px #c9c9c9,
+            -2px -2px 4px #ffffff;
+    }
+
+    & input[type="range"]::-moz-range-thumb {
+        background-color: hsl(calc(360 * var(--hue, .9)) calc(100% * var(--saturation, 1)) calc(100% * var(--lightness, .5)));
+        border-radius: 0.5rem;
+        cursor: pointer;
+        border: none;
+    }
+} */

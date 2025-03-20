@@ -13,15 +13,6 @@
         rel="stylesheet">
 </head>
 
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-
-<head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-
 <body>
     <main>
         <section>
@@ -42,8 +33,8 @@
             </div>
             <!-- ⬇️ waterbak ⬇️ -->
             <div>
-                <div class="wrapper">
-                    <div class="wave"></div>
+                <div>
+                    <div></div>
                 </div>
             </div>
             <!-- ⬇️ Flowers ⬇️ -->
@@ -58,40 +49,31 @@
 
              <!-- ⬇️ star ⬇️ -->
              <div></div>
-            
-
-
-
-
-
-
         </section>
 
 
         <section>
+
             <!-- ⬇️ toggle btn container ⬇️  -->
-
             <div>
-
+                <h3>Mood:</h3>
+                <!-- <h2>change mood</h2> -->
                 <label>😊
-                    <input type="radio" value="happy" name="mood" checked>
+                    <input type="radio" value="happy" name="mood" >
                 </label>
-
 
                 <label>😐
-                    <input type="radio" value="neutral" name="mood">
+                    <input type="radio" value="neutral" name="mood" checked>
                 </label>
-
 
                 <label>☹️
                     <input type="radio" value="sad" name="mood">
                 </label>
             </div>
 
-
             <!-- ⬇️ waterbak slider ⬇️  -->
             <form action="">
-                <h1 id="form-title">Vul de waterbak!</h1>
+                <h3>Water bowl</h3>
                 <!-- ⬇️ dot-slider ⬇️  -->
                 <div>
                     <label data-dot-amount="0 ml">
@@ -113,39 +95,45 @@
                     <label data-dot-amount="1 L">
                         <input type="radio" name="dot-amount" value="5">
                     </label>
-                    <!-- ⬇️ active button ⬇️  -->
+                    <!-- ⬇️ active btn ⬇️  -->
                     <div></div>
                 </div>
             </form>
 
-            <div class="sleep">
+            <!-- ⬇️ pull up & pull down btn ⬇️  -->
+            <div>
                 <label>
-                    <input type="checkbox" value="hoi">
+                    <input type="checkbox" value="change-height">
                 </label>
             </div>
 
-            <div class="toggle-container">
-                <label class="toggle-label"><input type="radio" value="day" name="toggle" checked> day</label>
-                <label class="toggle-label"><input type="radio" value="night" name="toggle"> night</label>
-                <div class="toggle">
-                    <div class="circle"></div>
-                </div>
+            <!-- ⬇️ day & night btns ⬇️  -->
+            <div>
+                <label><input type="radio" value="day" name="toggle" > day</label>
+                <label><input type="radio" value="night" name="toggle" checked> night</label>
             </div>
+
+        <!-- <div>
+            <label>
+                hue:
+                <input type="range" min="0" max="1" step=".1" value=".9" name="hue" orient="horizontal">	
+            </label>
+            
+            <label>
+                saturation:
+                <input type="range" min="0" max="1" step=".1" value="1" name="saturation" orient="horizontal">	
+            </label>
+            
+            <label>
+                lightness:
+                <input type="range" min="0" max="1" step=".1" value=".5" name="lightness" orient="horizontal">	
+            </label>
+        </div> -->
 
 
         </section>
     </main>
+
+    <script src="scripts/script.js"></script>
 </body>
-
-</html>
-
-
-
-
-
-
-<body>
-
-</body>
-
 </html>
