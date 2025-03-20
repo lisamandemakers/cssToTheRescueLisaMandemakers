@@ -117,7 +117,8 @@ Dit werkte niet en dus vroeg ik om hulp aan Nils, de docent. Hij gaf me een veel
 ![Afbeelding](readmeimg/eyes2.0.png) 
 Hier zie je dat op de de plek van het aantal procent van de grootte van het ook nu een custom properthy staat met: `var(--eye-size)` die ik heb gedefineerd op deze manier: 
 
-``` @property --eye-size {
+```
+ @property --eye-size {
     syntax: '<percentage>';
     inherits: true;
     initial-value: 9%;
