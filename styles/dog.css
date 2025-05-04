@@ -1,0 +1,235 @@
+
+/* 
+//////////////////////////////////////////////////////////
+---------------------🐶🐶🐶HONDJE🐶🐶🐶---------------------
+/////////////////////////////////////////////////////// */
+/* BRON DOG INPSO:
+https://www.youtube.com/watch?v=XN3KWtbVYug&t=1557s
+
+/* dog */
+body>main>section:first-of-type>div:first-child {
+    position: absolute;
+    height: 300px;
+    container-type: inline-size;
+    width: 300px;
+    max-width: 300px;
+    min-width: 200px;
+    scale: var(--dog-scale);
+    transition: 1s ease-in;
+    bottom: var(--dog-position);
+}
+
+/* Head */
+main>section:first-of-type>div:first-of-type div:first-child {
+    width: 50cqw;
+    aspect-ratio: 1;
+    background-color: rgb(242, 205, 171);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    left: 25cqw;
+    top: 1cqw;
+    background-image:
+        radial-gradient(ellipse 50% 30% at 70% 60%, rgb(238, 180, 213) 15%, transparent 0),
+        radial-gradient(ellipse 50% 30% at 30% 60%, rgb(238, 180, 213) 15%, transparent 0),
+        radial-gradient(ellipse 50% 30% at 50% 70%, rgb(255, 255, 255) 50%, transparent 0),
+        radial-gradient(circle at 31% 44%, rgb(255, 255, 255) 2.6%, transparent 0),
+        radial-gradient(circle at 36% 48%, rgb(255, 255, 255) 2%, transparent 0),
+        radial-gradient(circle at 61% 44%, rgb(255, 255, 255) 2.7%, transparent 0),
+        radial-gradient(circle at 65.5% 48%, rgb(255, 255, 255) 2%, transparent 0),
+        radial-gradient(circle at 33% 46%, rgb(0, 0, 0) var(--eye-size), transparent 0),
+        radial-gradient(circle at 63% 46%, rgb(0, 0, 0) var(--eye-size), transparent 0),
+        radial-gradient(circle at 63% 60%, rgb(145, 98, 57) 15%, transparent 0);
+    animation: eyes 3s ease-in infinite;
+}
+
+@keyframes eyes {
+    from {
+        --eye-size: 9%;
+    }
+
+    to {
+        --eye-size: 12%;
+    }
+}
+
+/* EARS */
+
+main>section:first-of-type>div:first-of-type div:first-child::before,
+main>section:first-of-type>div:first-of-type div:first-child::after {
+    content: "";
+    width: 25cqw;
+    aspect-ratio: 1;
+    background-color: rgb(201, 117, 58);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: absolute;
+    top: -1cqw;
+}
+
+/* Ear Left */
+main>section:first-of-type>div:first-of-type div:first-child::before {
+    left: -7cqw;
+}
+
+/* Ear Right */
+main>section:first-of-type>div:first-of-type div:first-child::after {
+    left: 32cqw;
+    transform: rotate(90deg);
+}
+
+/* Nose */
+main>section:first-of-type>div:first-of-type div:nth-child(3) {
+    width: 10cqw;
+    height: 6.25cqw;
+    background-color: black;
+    border-radius: 20% 20% 50% 50% / 25% 25% 70% 70%;
+    position: absolute;
+    top: 30cqw;
+    left: 45cqw;
+    z-index: 6;
+}
+
+/* nose highlight */
+main>section:first-of-type>div:first-of-type div:nth-child(3)::before {
+    content: "";
+    width: 6cqw;
+    height: 2.5cqw;
+    background-color: rgba(229, 229, 229, 0.376);
+    border-radius: inherit;
+    position: absolute;
+    top: 0.75cqw;
+    left: 1.25cqw;
+}
+
+/* Mouth */
+main>section:first-of-type>div:first-of-type div:nth-child(4) {
+    width: 7cqw;
+    height: 3.75cqw;
+    background-color: transparent;
+    border: var(--mouth-border);
+    border-top: 0;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    top: 37cqw;
+    left: 45.7cqw;
+    z-index: 8;
+    transition: rotate 0.3s ease-in;
+    rotate: var(--mouth-rotation);
+}
+
+/* Mouth dot left */
+main>section:first-of-type>div:first-of-type div:nth-child(4)::before {
+    content: "";
+    height: 1.25cqw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    position: inherit;
+    left: -1.2cqw;
+    top: -0.3cqw;
+}
+
+/* Mouth dot right */
+main>section:first-of-type>div:first-of-type div:nth-child(4)::after {
+    content: "";
+    height: 1.25cqw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    position: inherit;
+    right: -1.3cqw;
+    top: -0.4cqw;
+}
+
+/* collar */
+main>section:first-of-type>div:first-of-type div:nth-child(5) {
+    width: 40cqw;
+    height: 15cqw;
+    position: absolute;
+    background-color: var(--clr-collar);
+    z-index: 3;
+    border-radius: 0 0 50% 50%;
+    top: 40.6cqw;
+    left: 30cqw;
+}
+
+/* Body */
+main>section:first-of-type>div:first-of-type div:nth-child(6) {
+    height: 57.5cqw;
+    aspect-ratio: 1 / 1.1;
+    z-index: 99;
+    position: absolute;
+    border-radius: 43% 36% 35% 37% / 46% 46% 22% 23%;
+    top: 45cqw;
+    left: 24cqw;
+    z-index: 1;
+    background-image:
+        radial-gradient(ellipse 1% 5% at 30% 56%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 33% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 27% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 67% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 70% 56%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 1% 5% at 73% 55%, rgb(38, 18, 3)50%, transparent 0%),
+        radial-gradient(ellipse 20% 30% at 70% 44%, rgb(201, 117, 58)50%, transparent 0%),
+        radial-gradient(ellipse 20% 30% at 30% 44%, rgb(201, 117, 58)50%, transparent 0%),
+        radial-gradient(ellipse 100% 100% at 70% 70%, rgb(242, 205, 171) 100%, transparent 0)
+}
+
+/* flowers */
+main>section:first-of-type>div:nth-of-type(3),
+main>section:first-of-type>div:nth-of-type(4),
+main>section:first-of-type>div:nth-of-type(5),
+main>section:first-of-type>div:nth-of-type(6),
+main>section:first-of-type>div:nth-of-type(7) {
+    position: absolute;
+    z-index: 88;
+    right: 65%;
+    top: 80%;
+    width: 5vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow:
+        -2vw -3vw 0 0 var(--clr-leaves),
+        2vw -3vw 0 0 var(--clr-leaves),
+        2vw 3vw 0 0 var(--clr-leaves),
+        -2vw 3vw 0 0 var(--clr-leaves),
+        3.4vw 0px 0 0 var(--clr-leaves),
+        -3.5vw 0px 0 0 var(--clr-leaves);
+    background: var(--clr-collar);
+    animation: rotate-flowers 15s linear infinite;
+    scale: 0.5;
+
+    &:nth-of-type(4) {
+        left: 60%;
+        background-color: #b8c623;
+    }
+
+    &:nth-of-type(5) {
+        left: 70%;
+        top: 85%;
+        scale: 0.3;
+        background-color: #6553b6;
+    }
+
+    &:nth-of-type(6) {
+        left: 90%;
+        top: 70%;
+        scale: 0.3;
+        background-color: #23c651;
+    }
+
+    &:nth-of-type(7) {
+        left: 10%;
+        top: 80%;
+        background-color: #c62387;
+        scale: 0.8;
+    }
+}
+
+/* rotating flowers */
+@keyframes rotate-flowers {
+    100% {
+        transform: rotate(360deg);
+    }
+}

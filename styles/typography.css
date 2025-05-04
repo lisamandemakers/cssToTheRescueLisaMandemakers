@@ -5,6 +5,7 @@
     initial-value: 9%;
 }
 
+/* Bubbly font import */
 @font-face {
     font-family: 'bubblyfont'; 
     src: url('../fonts/bubblyfont.ttf') format('truetype'); 
@@ -12,7 +13,18 @@
     font-style: normal; 
 }
 
-
+/* global typography */
 body {
     font-family: 'bubblyfont', sans-serif; 
+}
+
+
+/* h1 */
+main h1:first-of-type {
+    position: absolute;
+    top: 2em;
+    z-index: 1;
+    font-size: 7vw;
+    font-weight: 400;
+color: white;
 }

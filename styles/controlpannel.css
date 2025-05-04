@@ -1,0 +1,619 @@
+/* 
+//////////////////////////////////////////////////////////
+----------------✨✨✨ CONTROL PANEL ✨✨✨-----------------
+/////////////////////////////////////////////////////// */
+
+section:nth-of-type(2) {
+    background: #ededed;
+    height: 400px;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -2em;
+    padding: 2em 0;
+    gap: 0em;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+@media (min-width: 600px) {
+    section:nth-of-type(2) {
+        flex-direction: row;
+        height: 300px;
+        background: #ededed;
+        width: 100%;
+        border-radius: 50px 50px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -2em;
+        padding: 2em 0;
+        gap: 0em;
+        flex-wrap: wrap;
+    }
+
+    main h1:first-of-type {
+        font-size: 4vw;
+    }
+
+
+}
+
+/*//////////////////////pull up & pull down////////////////// */
+/* pull up & down button */
+section:nth-of-type(2) div:nth-child(3) {
+    position: absolute;
+    top: -45px;
+}
+
+/* pull up & down button */
+section:nth-of-type(2) div:nth-child(3) label {
+    /* background-color: #2361c6; */
+    appearance: none;
+    padding: 40px;
+    border-bottom: 4px solid #9e9e9e;
+    cursor: pointer;
+    height: var(--heightbackground);
+}
+
+/* hide real checkbox */
+section:nth-of-type(2) div:nth-child(3) input[type="checkbox"] {
+    display: none;
+}
+
+/* change height value of first section*/
+body:has(input[value="change-height"]:checked) {
+    --heightbackground: 60vh;
+    --dog-position: 5em;
+    --dog-scale: 0.7;
+   
+
+}
+
+
+/* 
+//////////////////////////////////////////////////////////
+---------------------MOOD TOGGLE BTNS---------------------
+/////////////////////////////////////////////////////// */
+
+/* toggle container */
+section:nth-of-type(2)>div:first-of-type {
+    margin: 5.3vw;
+    display: flex;
+    gap: 10px;
+}
+
+/* Hide real radio buttons */
+section:nth-of-type(2)>div:first-of-type input[type="radio"] {
+    display: none;
+}
+
+/* Styling labels as btns */
+section:nth-of-type(2)>div:first-of-type label {
+    font-size: 1.5rem;
+    background: #ededed;
+    box-shadow: 4px 4px 8px #c9c9c9,
+        -4px -4px 8px #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    aspect-ratio: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+/* active radio-btn */
+section:nth-of-type(2)>div:first-of-type label:has(input[type="radio"]:checked) {
+    border-radius: 50%;
+    background: linear-gradient(145deg, #d5d5d5, #fefefe);
+    box-shadow: 4px 4px 8px #c9c9c9,
+        -4px -4px 8px #ffffff;
+    transform: scale(1.1);
+}
+
+/* btn: neutral */
+body:has([value="neutral"]:checked) section:first-of-type>div:first-of-type div:nth-child(4) {
+    --mouth-border: 1.20cqw solid #000000;
+    border-radius: 2%;
+    border-left: none;
+    border-right: none;
+    left: 47cqw;
+    transition: 0.1s ease-in-out;
+
+    &::after {
+        background-color: #000000;
+        left: 6cqw;
+        top: 3.6cqw;
+    }
+
+    &::before {
+        background-color: #000000;
+        left: -0.1cqw;
+        top: 3.6cqw;
+    }
+}
+
+/* btn: sad */
+body:has([value="sad"]:checked) section:first-of-type>div:first-of-type div:nth-child(4) {
+    --mouth-rotation: 180deg;
+}
+
+
+/* 
+//////////////////////////////////////////////////////////
+---------------------- WATER SLIDER ----------------------
+/////////////////////////////////////////////////////// */
+/* BRON DOT SLIDER:
+ https://www.thenoorhub.in/2022/01/pure-css-range-slider-pure-css-dot.html */
+
+/* water slider container general */
+main section:nth-of-type(2) form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* rotate: 90deg; */
+    width: 90%;
+    max-width: 500px;
+
+}
+
+/* water slider title */
+main section:nth-of-type(2) form h2 {
+    margin-top: 0;
+    font-weight: bold;
+    align-items: center;
+}
+
+/* water slider container */
+main section:nth-of-type(2) form>div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+/* actual slider */
+main section:nth-of-type(2) form>div:first-of-type::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: calc(100% * (4 / 5));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #c9c9c9, ;
+    box-shadow: 3px 3px 5px #c9c9c9,
+        -3px -3px 5px #ffffff;
+}
+
+/* water slider labels */
+main section:nth-of-type(2) form>div:first-of-type label {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+
+/* water slider labels text */
+main section:nth-of-type(2) form>div:first-of-type label::before {
+    content: attr(data-dot-amount);
+    position: absolute;
+    left: 50%;
+    padding-top: 10px;
+    transform: translate(-50%, 45px);
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    opacity: 0.55;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* water slider labels active text */
+main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::before {
+    font-weight: 800;
+    opacity: 1;
+}
+
+/* water slider labels dot */
+main section:nth-of-type(2) form div:first-of-type label::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: #ededed;
+    box-shadow: 3px 3px 5px #c9c9c9,
+        -3px -3px 5px #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+/* hover dot */
+main section:nth-of-type(2) form div:first-of-type label:hover::after {
+    transform: translate(-50%, -50%) scale(1.25);
+}
+
+/* active btn */
+main section:nth-of-type(2) form div:first-of-type input:checked+label::after {
+    transform: translate(-50%, -50%) scale(1.2);
+    border-radius: 50%;
+    background: linear-gradient(145deg, #d5d5d5, #fefefe);
+    box-shadow: 3px 3px 5px #c9c9c9,
+        -3px -3px 5px #ffffff;
+}
+
+/* active selected middle button */
+main section:nth-of-type(2) form div:first-of-type label:has(input:checked)::after {
+    transform: translate(-50%, -50%) scale(1.2);
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--clr-collar) 25%, transparent 0),
+        linear-gradient(145deg, #d5d5d5, #fefefe);
+    box-shadow: 3px 3px 5px #c9c9c9, -3px -3px 5px #ffffff;
+
+}
+
+/* actual input display: none */
+form div:first-of-type input {
+    display: none;
+}
+
+/* --------- */
+/* WATER BOWL */
+/* --------- */
+/* BRON WAVE ANIMATION:
+https://codepen.io/rstacruz/pen/oxJqNv */
+
+main>section:first-of-type>div:nth-child(2) {
+    position: absolute;
+    bottom: 18em;
+    right: 25vw;
+}
+
+/* water bowl container */
+main>section:first-of-type>div:nth-child(2)>div:first-child {
+    height: 8vw;
+    aspect-ratio: 20 / 9;
+    max-height: 100px;
+    clip-path: polygon(10% 100%, 90% 100%, 100% 20%, 0 20%);
+}
+
+
+/* waterbowl background */
+main>section:first-of-type>div:nth-child(2)>div:first-child {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-image: linear-gradient(#3f37dc, #5c97db);
+}
+
+/* moving water (wave) */
+main>section:first-of-type>div:nth-child(2)>div:first-child>div {
+    width: 35vw;
+    height: 35vw;
+    min-width: 300px;
+    min-height: 300px;
+    position: absolute;
+    bottom: var(--waterlevel);
+    left: -40%;
+    border-radius: 35%;
+    background: rgba(255, 255, 255, 0.75);
+    animation: wave 10s infinite linear;
+    rotate: 7deg;
+    overflow: hidden;
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+/* water levels */
+body:has([value="1"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
+    --waterlevel: -20%;
+}
+
+body:has([value="2"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
+    --waterlevel: 10%;
+}
+
+body:has([value="3"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
+    --waterlevel: 40%;
+}
+
+body:has([value="4"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
+    --waterlevel: 50%;
+}
+
+body:has([value="5"]:checked) main>section:first-of-type>div:nth-child(2)>div:first-child>div {
+    --waterlevel: 80%;
+}
+
+
+
+/* 
+//////////////////////////////////////////////////////////
+---------------------- DAY & NIGHT BTNS ------------------
+/////////////////////////////////////////////////////// */
+/* BRON SUN AND MOON:
+    https://codepen.io/gvissing/pen/XWVpjJd */
+/* BRON STYLE QUERIES:
+    Workshop: met Sanne
+    https://codepen.io/shooft/pen/OJGNKJz*/
+
+/* Defining style queries */
+html:has([value="day"]:checked) {
+    --day: true;
+}
+
+html:has([value="night"]:checked) {
+    --night: true;
+}
+
+/* if [value="day"] is checked: */
+@container style(--day:true) {
+    main>section:first-of-type>div:nth-of-type(8) {
+        height: 6em;
+        width: 6em;
+        border-radius: 50%;
+        background-color: #f1f5b8;
+        position: absolute;
+        top: 0;
+        margin-top: 2em;
+        right: 4vw;
+        border: 5px solid #f5eb71;
+        transition: 0.1s ease-in-out;
+    }
+}
+
+/* if [value="night"] is checked: */
+@container style(--night:true) {
+    body {
+        --clr-sky: #2843c0;
+        --clr-grass: #013c23;
+    }
+
+    /* moon */
+    main>section:first-of-type>div:nth-of-type(8) {
+        height: 6em;
+        width: 6em;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        margin-top: 2em;
+        right: 4vw;
+        border: 5px solid #e4e4e4;
+        transition: 0.1s ease-in-out;
+
+        /* moon dots */
+        &::before {
+            content: "";
+            height: 1em;
+            aspect-ratio: 1;
+            position: absolute;
+            background-color: #e4e4e4;
+            border-radius: 50%;
+            left: 25px;
+            top: 10px;
+        }
+
+        &::after {
+            content: "";
+            height: 0.5em;
+            aspect-ratio: 1;
+            position: absolute;
+            background-color: #e4e4e4;
+            border-radius: 50%;
+            left: 15px;
+            top: 30px;
+        }
+    }
+
+    /* stars */
+    main>section:first-of-type>div:nth-of-type(9) {
+        height: 0.3em;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: rgb(63, 16, 16);
+        position: absolute;
+        top: 0;
+        margin-top: 2em;
+        transition: 0.1s ease-in-out;
+        box-shadow:
+            -8vw 9vh 0 0 #ffffff,
+            32vw 22vh 0 0 #ffffff,
+            -18vw 34vh 0 0 #ffffff,
+            23vw 28vh 0 0 #ffffff,
+            -47vw 7vh 0 0 #ffffff,
+            12vw 6vh 0 0 #ffffff,
+            -28vw 33vh 0 0 #ffffff,
+            52vw 29vh 0 0 #ffffff,
+            -42vw 24vh 0 0 #ffffff,
+            33vw 12vh 0 0 #ffffff,
+            -31vw 36vh 0 0 #ffffff,
+            54vw 31vh 0 0 #ffffff,
+            -16vw 21vh 0 0 #ffffff,
+            62vw 6vh 0 0 #ffffff,
+            -39vw 31vh 0 0 #ffffff,
+            28vw 27vh 0 0 #ffffff,
+            -26vw 31vh 0 0 #ffffff,
+            11vw 11vh 0 0 #ffffff,
+            -17vw 19vh 0 0 #ffffff,
+            51vw 12vh 0 0 #ffffff,
+            -59vw 32vh 0 0 #ffffff,
+            7vw 19vh 0 0 #ffffff,
+            -29vw 26vh 0 0 #ffffff,
+            47vw 35vh 0 0 #ffffff,
+            -19vw 32vh 0 0 #ffffff,
+            52vw 34vh 0 0 #ffffff,
+            -38vw 16vh 0 0 #ffffff,
+            32vw 6vh 0 0 #ffffff;
+
+        &::before {
+            content: "";
+            height: 0.2em;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            margin-top: 2em;
+            box-shadow:
+                -43vw 12vh 0 0 #ffffff,
+                27vw 28vh 0 0 #ffffff,
+                -55vw 25vh 0 0 #ffffff,
+                19vw 30vh 0 0 #ffffff,
+                -50vw 7vh 0 0 #ffffff,
+                9vw 22vh 0 0 #ffffff,
+                -32vw 28vh 0 0 #ffffff,
+                45vw 13vh 0 0 #ffffff,
+                -24vw 19vh 0 0 #ffffff,
+                11vw 9vh 0 0 #ffffff,
+                -18vw 31vh 0 0 #ffffff,
+                51vw 21vh 0 0 #ffffff,
+                -12vw 16vh 0 0 #ffffff,
+                58vw 33vh 0 0 #ffffff,
+                -38vw 23vh 0 0 #ffffff,
+                17vw 18vh 0 0 #ffffff,
+                -60vw 30vh 0 0 #ffffff,
+                25vw 27vh 0 0 #ffffff,
+                -44vw 5vh 0 0 #ffffff,
+                39vw 11vh 0 0 #ffffff,
+                -29vw 30vh 0 0 #ffffff,
+                50vw 16vh 0 0 #ffffff,
+                -47vw 19vh 0 0 #ffffff,
+                33vw 28vh 0 0 #ffffff,
+                -40vw 12vh 0 0 #ffffff,
+                53vw 26vh 0 0 #ffffff,
+                -15vw 18vh 0 0 #ffffff,
+                60vw 5vh 0 0 #ffffff;
+        }
+    }
+
+    /* flowers changing color */
+    main>section:first-of-type>div:nth-of-type(3),
+    main>section:first-of-type>div:nth-of-type(4),
+    main>section:first-of-type>div:nth-of-type(5),
+    main>section:first-of-type>div:nth-of-type(6),
+    main>section:first-of-type>div:nth-of-type(7) {
+        --clr-leaves: #17023a;
+    }
+}
+
+/* day & night btn styling */
+section:nth-of-type(2)>div:nth-child(4) {
+    display: flex;
+    gap: 10px;
+    margin: 5.3vw;
+}
+
+/* hide real radio buttons */
+section:nth-of-type(2)>div:nth-child(4) input[type="radio"] {
+    display: none;
+}
+
+/* styling labels as btns */
+section:nth-of-type(2)>div:nth-child(4) label {
+    font-size: 1rem;
+    background: #ededed;
+    box-shadow: 4px 4px 8px #c9c9c9,
+        -4px -4px 8px #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 0 30px;
+    border-radius: 5px;
+}
+
+/* active btn styling */
+section:nth-of-type(2)>div:nth-child(4) label:has(input[type="radio"]:checked) {
+    background: linear-gradient(145deg, #d5d5d5, #fefefe);
+    box-shadow: 6px 6px 12px #c9c9c9,
+        -6px -6px 12px #ffffff;
+    transform: scale(1.05);
+}
+
+
+/* Wel mee geëxperimenteerd, maar werkt niet zoals ik wil */
+/* 
+//////////////////////////////////////////////////////////
+---------------------- RANGE SLIDERS ------------------
+/////////////////////////////////////////////////////// */
+/* BRON RANGE SLIDERS:
+   https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
+
+
+
+/* section:nth-of-type(2)>div:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start; 
+    & label {
+        display: block; 
+  margin-bottom: 0.5rem; 
+
+    }
+
+    & input[type="range"]::-webkit-slider-runnable-track {
+        background: #c9c9c9;
+        height: 1rem;
+        border-radius: 10px;
+        background: #ededed;
+        box-shadow: 2px 2px 4px #c9c9c9,
+            -2px -2px 4px #ffffff;
+    }
+
+    & input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: var(--clr-collar);
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+
+
+    & input[type="range"]::-moz-range-track {
+        background: #c9c9c9;
+        height: 1rem;
+        border-radius: 30px;
+        background: #ededed;
+        box-shadow: 2px 2px 4px #c9c9c9,
+            -2px -2px 4px #ffffff;
+    }
+
+    & input[type="range"]::-moz-range-thumb {
+        background-color: hsl(calc(360 * var(--hue, .9)) calc(100% * var(--saturation, 1)) calc(100% * var(--lightness, .5)));
+        border-radius: 0.5rem;
+        cursor: pointer;
+        border: none;
+    }
+} */

@@ -8,6 +8,13 @@ html {
     /* height: section 1 */
     --heightbackground: 100vh;
 
+     /* position dog*/
+     --dog-position: 10em;
+
+     /* scale dog */
+     --dog-scale: 1;
+
+
     /* mouth positions */
     --mouth-rotation: 0deg;
     --mouth-border: 1.25cqw solid #000000;
