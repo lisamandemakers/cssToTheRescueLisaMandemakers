@@ -1,0 +1,18 @@
+/* eye size of dog */
+@property --eye-size {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 9%;
+}
+
+@font-face {
+    font-family: 'bubblyfont'; 
+    src: url('../fonts/bubblyfont.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+
+body {
+    font-family: 'bubblyfont', sans-serif; 
+}

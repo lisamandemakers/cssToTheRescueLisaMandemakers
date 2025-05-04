@@ -1,0 +1,17 @@
+html {
+    /* colors */
+    --clr-collar: #f977c5;
+    --clr-grass: #9de8a7;
+    --clr-sky: rgb(96, 215, 254);
+    --clr-leaves: #fff1f6;
+
+    /* height: section 1 */
+    --heightbackground: 100vh;
+
+    /* mouth positions */
+    --mouth-rotation: 0deg;
+    --mouth-border: 1.25cqw solid #000000;
+
+    /* water heights */
+    --waterlevel: 50%;
+}

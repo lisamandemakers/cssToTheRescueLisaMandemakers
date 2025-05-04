@@ -1,40 +1,4 @@
-html {
-    /* colors */
-    --clr-collar: #f977c5;
-    --clr-grass: #9de8a7;
-    --clr-sky: rgb(96, 215, 254);
-    --clr-leaves: #fff1f6;
 
-    /* height: section 1 */
-    --heightbackground: 100vh;
-
-    /* mouth positions */
-    --mouth-rotation: 0deg;
-    --mouth-border: 1.25cqw solid #000000;
-
-    /* water heights */
-    --waterlevel: 50%;
-
-}
-
-/* eye size of dog */
-@property --eye-size {
-    syntax: '<percentage>';
-    inherits: true;
-    initial-value: 9%;
-}
-
-@font-face {
-    font-family: 'bubblyfont'; /* Kies een naam voor je font */
-    src: url('../fonts/bubblyfont.ttf') format('truetype'); /* Pad naar je TTF bestand */
-    font-weight: normal; /* Optioneel, kan worden aangepast */
-    font-style: normal; /* Optioneel, kan worden aangepast */
-}
-
-/* Nu kun je het font gebruiken in je CSS */
-body {
-    font-family: 'bubblyfont', sans-serif; /* Zorg ervoor dat je het font ook toepast op je elementen */
-}
 
 
 * {
@@ -141,19 +105,9 @@ main>section:first-of-type>div:first-of-type div:first-child {
     }
 }
 
-/* Ear Left */
-main>section:first-of-type>div:first-of-type div:first-child::before {
-    content: "";
-    width: 25cqw;
-    aspect-ratio: 1;
-    background-color: rgb(201, 117, 58);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    position: absolute;
-    top: -1cqw;
-    left: -7cqw;
-}
+/* EARS */
 
-/* Ear Right */
+main>section:first-of-type>div:first-of-type div:first-child::before,
 main>section:first-of-type>div:first-of-type div:first-child::after {
     content: "";
     width: 25cqw;
@@ -162,6 +116,15 @@ main>section:first-of-type>div:first-of-type div:first-child::after {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     position: absolute;
     top: -1cqw;
+}
+
+/* Ear Left */
+main>section:first-of-type>div:first-of-type div:first-child::before {
+    left: -7cqw;
+}
+
+/* Ear Right */
+main>section:first-of-type>div:first-of-type div:first-child::after {
     left: 32cqw;
     transform: rotate(90deg);
 }
