@@ -144,7 +144,7 @@ Het gebruik van media queries was een ander belangrijk aspect. Door mijn ontwerp
 
 ## Herkansing
 
-Voor de herkansing heb ik feedback ontvangen en gericht gewerkt aan een aantal punten om mijn project technisch en visueel te verbeteren. Hieronder een overzicht van de onderdelen die ik heb aangepast en een korte toelichting per punt.
+Voor de herkansing heb ik feedback ontvangen en gericht gewerkt aan een aantal punten om mijn project te verbeteren. Hieronder een overzicht van de onderdelen die ik heb aangepast en een korte toelichting per punt.
 
 * Correct responsiveness
 * Gebruik van vh = 100 en overflow: hidden
