@@ -8,12 +8,19 @@ html {
     /* height: section 1 */
     --heightbackground: 100vh;
 
-     /* position dog*/
-     --dog-position: 10em;
-
-     /* scale dog */
+     /* dog position & size*/
+     --dog-position: 20%;
      --dog-scale: 1;
 
+     /* opacity control panel elements */
+     --control-panel-opacity: 0;
+
+     /* h1 posiion & size */
+     --h1-position: 1em;
+     --h1-font-size: 3em;
+
+     /* water bowl position */
+    --water-bowl-position: 30%;
 
     /* mouth positions */
     --mouth-rotation: 0deg;

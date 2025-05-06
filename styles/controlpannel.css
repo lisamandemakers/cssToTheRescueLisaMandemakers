@@ -5,7 +5,8 @@
 
 section:nth-of-type(2) {
     background: #ededed;
-    height: 400px;
+  
+    height: 40vh;
     width: 100%;
     border-radius: 50px 50px 0 0;
     display: flex;
@@ -13,42 +14,22 @@ section:nth-of-type(2) {
     align-items: center;
     position: relative;
     top: -2em;
-    padding: 2em 0;
-    gap: 0em;
     flex-direction: column;
-    flex-wrap: wrap;
+    gap: 1.5em;
+    z-index: 99;
+    transition: 1s ease-in-out;
+    padding-top: 1.5em;
+    
 }
 
 
-@media (min-width: 600px) {
-    section:nth-of-type(2) {
-        flex-direction: row;
-        height: 300px;
-        background: #ededed;
-        width: 100%;
-        border-radius: 50px 50px 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: -2em;
-        padding: 2em 0;
-        gap: 0em;
-        flex-wrap: wrap;
-    }
-
-    main h1:first-of-type {
-        font-size: 4vw;
-    }
-
-
-}
 
 /*//////////////////////pull up & pull down////////////////// */
 /* pull up & down button */
 section:nth-of-type(2) div:nth-child(3) {
     position: absolute;
     top: -45px;
+    
 }
 
 /* pull up & down button */
@@ -69,8 +50,12 @@ section:nth-of-type(2) div:nth-child(3) input[type="checkbox"] {
 /* change height value of first section*/
 body:has(input[value="change-height"]:checked) {
     --heightbackground: 60vh;
-    --dog-position: 5em;
+    --dog-position:10%;
     --dog-scale: 0.7;
+    --control-panel-opacity: 1;
+    --h1-position: 3em;
+    --h1-font-size: 1.2em;
+   
    
 
 }
@@ -82,19 +67,20 @@ body:has(input[value="change-height"]:checked) {
 /////////////////////////////////////////////////////// */
 
 /* toggle container */
-section:nth-of-type(2)>div:first-of-type {
-    margin: 5.3vw;
+section:nth-of-type(2)>div:first-of-type div {
     display: flex;
     gap: 10px;
+    opacity: var(--control-panel-opacity);
+    transition: 1s ease-in;
 }
 
 /* Hide real radio buttons */
-section:nth-of-type(2)>div:first-of-type input[type="radio"] {
+section:nth-of-type(2)>div:first-of-type div input[type="radio"] {
     display: none;
 }
 
 /* Styling labels as btns */
-section:nth-of-type(2)>div:first-of-type label {
+section:nth-of-type(2)>div:first-of-type div label {
     font-size: 1.5rem;
     background: #ededed;
     box-shadow: 4px 4px 8px #c9c9c9,
@@ -108,6 +94,13 @@ section:nth-of-type(2)>div:first-of-type label {
     cursor: pointer;
     border-radius: 50%;
     transition: all 0.2s ease-in-out;
+}
+
+section:nth-of-type(2)> div h3 {
+    text-align: center;
+    margin: 0.5em;
+    opacity: var(--control-panel-opacity);
+    transition: 1s ease-in;
 }
 
 /* active radio-btn */
@@ -160,10 +153,10 @@ main section:nth-of-type(2) form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* rotate: 90deg; */
     width: 90%;
     max-width: 500px;
-
+    opacity: var(--control-panel-opacity);
+    transition: 1s ease-in;
 }
 
 /* water slider title */
@@ -284,8 +277,9 @@ https://codepen.io/rstacruz/pen/oxJqNv */
 
 main>section:first-of-type>div:nth-child(2) {
     position: absolute;
-    bottom: 18em;
-    right: 25vw;
+    bottom: var(--water-bowl-position);
+    right: 15vw;
+    transition: 1s ease-in-out;
 }
 
 /* water bowl container */
@@ -367,6 +361,7 @@ body:has([value="5"]:checked) main>section:first-of-type>div:nth-child(2)>div:fi
 /* Defining style queries */
 html:has([value="day"]:checked) {
     --day: true;
+    
 }
 
 html:has([value="night"]:checked) {
@@ -525,10 +520,14 @@ html:has([value="night"]:checked) {
 }
 
 /* day & night btn styling */
+
 section:nth-of-type(2)>div:nth-child(4) {
     display: flex;
     gap: 10px;
-    margin: 5.3vw;
+    opacity: var(--control-panel-opacity);
+    transition: 1s ease-in;
+    margin-top: 1.5em;
+
 }
 
 /* hide real radio buttons */
@@ -541,7 +540,7 @@ section:nth-of-type(2)>div:nth-child(4) label {
     font-size: 1rem;
     background: #ededed;
     box-shadow: 4px 4px 8px #c9c9c9,
-        -4px -4px 8px #ffffff;
+                -4px -4px 8px #ffffff;
     text-align: center;
     display: flex;
     align-items: center;
@@ -549,7 +548,7 @@ section:nth-of-type(2)>div:nth-child(4) label {
     aspect-ratio: 1;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    padding: 0 30px;
+    padding: 0 1em;
     border-radius: 5px;
 }
 

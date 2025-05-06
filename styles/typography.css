@@ -7,24 +7,35 @@
 
 /* Bubbly font import */
 @font-face {
-    font-family: 'bubblyfont'; 
-    src: url('../fonts/bubblyfont.ttf') format('truetype'); 
-    font-weight: normal; 
-    font-style: normal; 
+    font-family: 'bubblyfont';
+    src: url('../fonts/bubblyfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* global typography */
 body {
-    font-family: 'bubblyfont', sans-serif; 
+    font-family: 'bubblyfont', sans-serif;
 }
 
 
 /* h1 */
 main h1:first-of-type {
     position: absolute;
-    top: 2em;
+    top: 1em;
     z-index: 1;
-    font-size: 7vw;
+    font-size: 3em;
     font-weight: 400;
-color: white;
+    text-align: center;
+    padding: 0.5em;
+    color: rgb(11, 5, 70);   
+    transition: 1s ease-in-out;
+}
+
+@media (max-width: 550px) {
+    main h1:first-of-type {
+        top: var(--h1-position);
+        font-size: var(--h1-font-size);
+    }
+
 }

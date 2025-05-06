@@ -142,6 +142,75 @@ Het gebruik van media queries was een ander belangrijk aspect. Door mijn ontwerp
 ![Afbeelding](readmeimg/nightmode.png) 
 
 
+## Herkansing
+
+Voor de herkansing heb ik feedback ontvangen en gericht gewerkt aan een aantal punten om mijn project technisch en visueel te verbeteren. Hieronder een overzicht van de onderdelen die ik heb aangepast en een korte toelichting per punt.
+
+* Correct responsiveness
+* Gebruik van vh = 100 en overflow: hidden
+* Positionering van top en bottom elementen
+* Opruimen van dubbele en overbodige CSS-code
+* Positionering van het control panel
+* Gebruik van aparte CSS-documenten
+* main van voorgrond gehaald
+* Soepelere animaties
+* h1 laten schalen op mobiel
+* Waterbak correct gepositioneerd
+
+### Correct responsiveness
+Wat was het probleem: De layout schaalt niet goed mee op alle schermformaten, met name mobiel.
+Aanpassing: Ik heb units als vh herzien en gebruik gemaakt van cqh, cqw om responsieve groottes in te stellen. Ik heb complexe code met mediaqueries ook weg gehaald en bijvoorbeel een flexbox voor in de plaats gezet. 
+
+### Gebruik van vh = 100 en overflow: hidden
+Wat was het probleem: Ik heb een uitschuif knop en je kon gewoon naar beneden scrollen om die knop te zien, dat is uiteraard niet de bedoeling.
+Aanpassing: Ik heb gebruik gemaakt van height: 100vh en daarna overflow: hidden gebruikt, zodat na 100vh (hele scherm lengte), je niet meer kon scrollen en dus de knop zou zien.
+
+### Positionering van top en bottom elementen
+Wat was het probleem: Ik maakte geen goed gebruik van `top` en `bottom`
+Aanpassing: IK wist niet dat het soms beter is om `top` te gebruiken en soms beter is om `bottom` (geld ook voor `left` en `right`). 
+Maar daar heb ik nu aan gewerkt en nu bijv bij het hondje, de aan het gras moet blijven heb ik `bottom` gebruikt. Wat veel mooier werkt.
+
+### Dubbele en overbodige CSS-code opgeschoond
+Wat was het probleem: Er stond code inh het project wat dubbel was geschreven en eigenlijk compleet overbodig was.
+Aanpassing: Ik heb alle CSS opgeschoond. Ongebruikte selectors en dubbele definities zijn verwijderd. Dit maakt de code overzichtelijker. Ook heb ik meer dingen genest.
+
+### Positionering control panel verbeterd
+Wat was het probleem: Het control panel inhoud verschoof op bepaalde schermgroottes of stond niet op een logische plek.
+Aanpassing: Ik heb de positionering van het panel veranderd met behulp van flexbox, zodat het netjes gecentreerd staat en flexibel blijft.
+
+### Aparte CSS-documenten
+Wat was het probleem: Alles stond in één bestand, wat het onoverzichtelijk maakte.
+Aanpassing: Ik heb de CSS opgesplitst in meerdere logische modules, zoals dog.css, controlpanel.css, variables.css, enzovoort. Dit maakt het onderhoud eenvoudiger.
+
+### Voorgrond-elementen gecorrigeerd (main van voorgrond gehaald)
+Wat was het probleem: De main stond visueel op de voorgrond terwijl het niet de bedoeling was.
+Aanpassing: De z-index-waarden veranderd, zodat de juiste elementen vooraan staan.
+
+### Soepelere animaties
+Wat was het probleem: Sommige animaties waren abrupt of niet vloeiend.
+Aanpassing: Ik heb gebruik gemaakt van custom properties, waarvan ik de waarde aanpas zodra er iets moest gebeuren.
+
+```css
+body:has(input[value="change-height"]:checked) {
+    --heightbackground: 60vh;
+    --dog-position:10%;
+    --dog-scale: 0.7;
+    --control-panel-opacity: 1;
+    --h1-position: 3em;
+    --h1-font-size: 1.2em;
+}
+```
+
+Hier zie je dat ik bijvoorbeeld de hond kleiner laat worden met scaling, zodra het conrtol panel omhoog verschuift. Ik heb op de elementen over een `transition: 1s ease-in-out;` geplaatst, zodat het in een mooie vloeiende beweging gebeurd.
+
+### h1 mooi schalend op mobiel
+Wat was het probleem: De h1-titel was te groot op mobiel scherm. Alleen wanneer de controlpanel omhoog werd geschakeld.
+Aanpassing: De `font-size` van de h1 een custom property meegeven en deze vervolgens aanpassen zodra de control panel omhoog wordt geklikt.
+
+### Waterbak correct gepositioneerd
+Wat was het probleem: De visuele waterbak versprong of stond niet logisch ten opzichte van het hondje.
+Aanpassing: De positionering is verbeterd met relative containers en absolute plaatsing binnen context, zodat het watebakje goed staat in verhouding met de hond.
+
 
 ## Bronnenlijst
 
@@ -151,9 +220,6 @@ Het gebruik van media queries was een ander belangrijk aspect. Door mijn ontwerp
 * [Zon en maan](https://codepen.io/gvissing/pen/XWVpjJd)
 * [Workshop met Sanne voor style queries](https://codepen.io/shooft/pen/OJGNKJz*/)
 * [Range sliders]( https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ )
-
-
-
 
 
 
